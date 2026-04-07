@@ -1,8 +1,8 @@
 /* ─── Variables ─────────────────────────────────────────────────────────── */
 :root {
-  --teal:        #1A5C4A;
-  --teal-dark:   #124438;
-  --teal-light:  #2A7A64;
+  --teal:        #00383b;
+  --teal-dark:   #00282b;
+  --teal-light:  #1a4c4e;
   --pink:        #D10069;
   --pink-light:  #F7E6F0;
   --black:       #1A1A1A;
@@ -65,7 +65,7 @@ a { text-decoration: none; color: inherit; }
   min-height: 100vh;
   background: var(--teal);
   /* Replace the line below with: background-image: url('path/to/hero-photo.jpg'); */
-  background-image: linear-gradient(160deg, #124438 0%, #1A5C4A 45%, #2A7A64 100%);
+  background-image: linear-gradient(160deg, #00282b 0%, #00383b 45%, #1a4c4e 100%);
   background-size: cover;
   background-position: center;
   display: flex;
