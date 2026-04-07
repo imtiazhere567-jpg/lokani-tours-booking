@@ -21,45 +21,46 @@ const BUDGET_OPTIONS = [
 ];
 
 const INTERESTS = [
-  { id: 'adventure',   label: 'Adventure',            desc: 'ATV, Zipline, Paragliding',      emoji: '🏔️' },
-  { id: 'ocean',       label: 'Ocean Experiences',    desc: 'Jet Ski, Fishing, Sailing',       emoji: '🌊' },
-  { id: 'wildlife',    label: 'Nature & Wildlife',    desc: 'Monkeys, Crocodiles, Rainforest', emoji: '🌿' },
-  { id: 'relaxation',  label: 'Relaxation & Wellness',desc: 'Spa, Sunset, Slow experiences',   emoji: '🧘' },
-  { id: 'food',        label: 'Food & Culture',       desc: 'Local cuisine & cultural tours',  emoji: '🍽️' },
+  { id: 'adventure',   label: 'Adventure',            desc: 'ATV, Zipline, Paragliding',      emoji: '🏔️', icon: 'assets/icons/LOKANI ICONS-04.png' },
+  { id: 'ocean',       label: 'Ocean Experiences',    desc: 'Jet Ski, Fishing, Sailing',       emoji: '🌊', icon: 'assets/icons/LOKANI ICONS-09.png' },
+  { id: 'wildlife',    label: 'Nature & Wildlife',    desc: 'Monkeys, Crocodiles, Rainforest', emoji: '🌿', icon: 'assets/icons/LOKANI ICONS-20.png' },
+  { id: 'relaxation',  label: 'Relaxation & Wellness',desc: 'Spa, Sunset, Slow experiences',   emoji: '🧘', icon: 'assets/icons/LOKANI ICONS-11.png' },
+  { id: 'food',        label: 'Food & Culture',       desc: 'Local cuisine & cultural tours',  emoji: '🍽️', icon: 'assets/icons/LOKANI ICONS-21.png' },
 ];
 
 const TOURS = [
   { id: 'atv',             name: 'ATV Tour',             tagline: 'Off-road jungle adventure',      interests: ['adventure'],            tiers: ['100-150','150-250','250+'], priceFrom: 75,  duration: '3–4 hours',          emoji: '🏍️',  image: 'assets/atv.png',  gradient: 'linear-gradient(135deg,#5D4037,#A1643E)',  desc: 'Explore rugged Costa Rica terrain on an exciting ATV adventure through jungle trails and scenic overlooks.' },
-  { id: 'horseback',       name: 'Horseback Riding',     tagline: 'Coastal trail rides',            interests: ['adventure','wildlife'],  tiers: ['65-100','100-150','150-250','250+'], priceFrom: 70,  duration: '2–3 hours',          emoji: '🐴',  gradient: 'linear-gradient(135deg,#BF360C,#E64A19)',  desc: 'Ride through scenic coastal trails, tropical forests, and stunning ocean overlooks with expert guides.' },
-  { id: 'monkeys',         name: 'Monkey Tour',          tagline: 'Meet the jungle locals',         interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🐒',  gradient: 'linear-gradient(135deg,#33691E,#558B2F)',  desc: 'Get up close with howler and white-faced monkeys in their natural tropical habitat. A must for nature lovers.' },
-  { id: 'crocodile',       name: 'Crocodile Tour',       tagline: 'River wildlife adventure',       interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🐊',  gradient: 'linear-gradient(135deg,#827717,#B39000)',  desc: 'Cruise the Tarcoles River and spot massive American crocodiles in the wild up close.' },
-  { id: 'snorkeling',      name: 'Snorkeling',           tagline: 'Discover marine life',           interests: ['ocean'],                tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🤿',  gradient: 'linear-gradient(135deg,#00838F,#00ACC1)',  desc: 'Discover vibrant marine life in the crystal-clear Pacific waters near the coastline.' },
+  { id: 'horseback',       name: 'Horseback Riding',     tagline: 'Coastal trail rides',            interests: ['adventure','wildlife'],  tiers: ['65-100','100-150','150-250','250+'], priceFrom: 70,  duration: '2–3 hours',          emoji: '🐴',  image: 'assets/horseback.png', gradient: 'linear-gradient(135deg,#BF360C,#E64A19)',  desc: 'Ride through scenic coastal trails, tropical forests, and stunning ocean overlooks with expert guides.' },
+  { id: 'monkeys',         name: 'Monkey Tour',          tagline: 'Meet the jungle locals',         interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🐒',  image: 'assets/monkeys.png', gradient: 'linear-gradient(135deg,#33691E,#558B2F)',  desc: 'Get up close with howler and white-faced monkeys in their natural tropical habitat. A must for nature lovers.' },
+  { id: 'crocodile',       name: 'Crocodile Tour',       tagline: 'River wildlife adventure',       interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🐊',  image: 'assets/crocodile.png', gradient: 'linear-gradient(135deg,#827717,#B39000)',  desc: 'Cruise the Tarcoles River and spot massive American crocodiles in the wild up close.' },
+  { id: 'snorkeling',      name: 'Snorkeling',           tagline: 'Discover marine life',           interests: ['ocean'],                tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🤿',  image: 'assets/snorkeling.png', gradient: 'linear-gradient(135deg,#00838F,#00ACC1)',  desc: 'Discover vibrant marine life in the crystal-clear Pacific waters near the coastline.' },
   { id: 'zipline',         name: 'Zipline',              tagline: 'Fly through the canopy',         interests: ['adventure'],            tiers: ['65-100','100-150','150-250','250+'], priceFrom: 120, duration: '3 hours',            emoji: '🪂',  image: 'assets/zipline.png', gradient: 'linear-gradient(135deg,#2E7D32,#43A047)',  desc: 'Soar through the jungle canopy on thrilling ziplines with breathtaking panoramic views of the valley.' },
   { id: 'rafting',         name: 'White Water Rafting',  tagline: 'River rapids adventure',         interests: ['adventure'],            tiers: ['100-150','150-250','250+'],          priceFrom: 95,  duration: '4 hours',            emoji: '🚣',  image: 'assets/rafting.png', gradient: 'linear-gradient(135deg,#0277BD,#01579B)',  desc: 'Experience the thrill of navigating high-energy river rapids through lush tropical canyons with expert guides.' },
   { id: 'jetski',          name: 'Jet Ski',              tagline: 'Race across the waves',          interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 110, duration: '1–2 hours',          emoji: '🌊',  image: 'assets/jetski.png',  gradient: 'linear-gradient(135deg,#006064,#00838F)',  desc: 'Race across the Pacific waves on a thrilling jet ski adventure along the stunning coastline.' },
-  { id: 'jetsailing',      name: 'Jet Sailing',          tagline: 'Speed meets serenity',           interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 130, duration: '3–4 hours',          emoji: '⛵',  gradient: 'linear-gradient(135deg,#1A237E,#283593)',  desc: 'The ultimate combo — high-speed jet boat and serene sailing along the stunning coastline.' },
-  { id: 'bioluminescence', name: 'Bioluminescence Tour', tagline: 'Magic glowing waters at night',  interests: ['ocean','wildlife'],     tiers: ['100-150','150-250','250+'],          priceFrom: 115, duration: '2–3 hrs (evening)',  emoji: '✨',  gradient: 'linear-gradient(135deg,#1A1A2E,#0F3460)',  desc: 'Paddle through glowing bioluminescent waters in a truly magical evening kayaking experience.' },
+  { id: 'jetsailing',      name: 'Jet Sailing',          tagline: 'Speed meets serenity',           interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 130, duration: '3–4 hours',          emoji: '⛵',  image: 'assets/jetsailing.png', gradient: 'linear-gradient(135deg,#1A237E,#283593)',  desc: 'The ultimate combo — high-speed jet boat and serene sailing along the stunning coastline.' },
+  { id: 'bioluminescence', name: 'Bioluminescence Tour', tagline: 'Magic glowing waters at night',  interests: ['ocean','wildlife'],     tiers: ['100-150','150-250','250+'],          priceFrom: 115, duration: '2–3 hrs (evening)',  emoji: '✨',  image: 'assets/bioluminescence.png', gradient: 'linear-gradient(135deg,#1A1A2E,#0F3460)',  desc: 'Paddle through glowing bioluminescent waters in a truly magical evening kayaking experience.' },
   { id: 'tortuga',         name: 'Tortuga Island',       tagline: 'Paradise island escape',         interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 125, duration: 'Full day',            emoji: '🏝️', image: 'assets/tortuga.png', gradient: 'linear-gradient(135deg,#00695C,#00897B)',  desc: 'Sail to stunning Tortuga Island for world-class snorkeling, pristine beaches, and a delicious lunch.' },
-  { id: 'paragliding',     name: 'Paragliding',          tagline: 'Soar above the coast',           interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 165, duration: '2 hours',            emoji: '🪁',  gradient: 'linear-gradient(135deg,#1565C0,#1976D2)',  desc: 'Fly high above the coast and jungle with a professional paragliding guide. Unforgettable views await.' },
+  { id: 'paragliding',     name: 'Paragliding',          tagline: 'Soar above the coast',           interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 165, duration: '2 hours',            emoji: '🪁',  image: 'assets/paragliding.png', gradient: 'linear-gradient(135deg,#1565C0,#1976D2)',  desc: 'Fly high above the coast and jungle with a professional paragliding guide. Unforgettable views await.' },
   { id: 'fishing',         name: 'Sport Fishing',        tagline: 'Offshore fishing',               interests: ['ocean'],                tiers: ['250+'],                             priceFrom: 200, duration: 'Full day',            emoji: '🎣',  image: 'assets/fishing.png', gradient: 'linear-gradient(135deg,#01579B,#0277BD)',  desc: 'World-class offshore fishing for marlin, sailfish, and dorado with expert local guides.' },
-  { id: 'sailing',         name: 'Private Sailing',      tagline: 'Luxury sunset charter',          interests: ['ocean','relaxation'],   tiers: ['250+'],                             priceFrom: 250, duration: 'Half or full day',   emoji: '🌅',  gradient: 'linear-gradient(135deg,#4A148C,#6A1B9A)',  desc: 'Private sailing charter along the stunning Pacific coastline. Perfect for sunset or a full-day escape.' },
-  { id: 'surf',            name: 'Surf Lessons',         tagline: 'Catch your first wave',          interests: ['ocean','adventure'],    tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '🏄‍♂️', gradient: 'linear-gradient(135deg,#0097A7,#00BCD4)',  desc: 'Learn to surf with professional local instructors at some of the world’s best beginner breaks.' },
-  { id: 'coffee',          name: 'Coffee & Tasting',     tagline: 'Authentic local flavors',        interests: ['food'],                 tiers: ['100-150','150-250','250+'],          priceFrom: 65,  duration: '2 hours',            emoji: '☕',  gradient: 'linear-gradient(135deg,#795548,#8D6E63)',  desc: 'Discover the rich history of Costa Rican coffee followed by a traditional Guaro spirit tasting session.' },
+  { id: 'sailing',         name: 'Private Sailing',      tagline: 'Luxury sunset charter',          interests: ['ocean','relaxation'],   tiers: ['250+'],                             priceFrom: 250, duration: 'Half or full day',   emoji: '🌅',  image: 'assets/sailing.png', gradient: 'linear-gradient(135deg,#4A148C,#6A1B9A)',  desc: 'Private sailing charter along the stunning Pacific coastline. Perfect for sunset or a full-day escape.' },
+  { id: 'surf',            name: 'Surf Lessons',         tagline: 'Catch your first wave',          interests: ['ocean','adventure'],    tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '🏄‍♂️', image: 'assets/surf.png', gradient: 'linear-gradient(135deg,#0097A7,#00BCD4)',  desc: 'Learn to surf with professional local instructors at some of the world’s best beginner breaks.' },
+  { id: 'coffee',          name: 'Coffee & Tasting',     tagline: 'Authentic local flavors',        interests: ['food'],                 tiers: ['100-150','150-250','250+'],          priceFrom: 65,  duration: '2 hours',            emoji: '☕',  image: 'assets/coffee.png', gradient: 'linear-gradient(135deg,#795548,#8D6E63)',  desc: 'Discover the rich history of Costa Rican coffee followed by a traditional Guaro spirit tasting session.' },
 ];
 
+
 const EXTRA_SERVICES = [
-  { id: 'massage',      name: 'Massage',        emoji: '💆', desc: 'Professional in-villa massage service. Relax and recharge.',          priceFrom: 80,  options: ['60 min', '90 min'] },
-  { id: 'iv-therapy',   name: 'IV Therapy',     emoji: '💉', desc: 'Rejuvenating IV vitamin therapy session at your villa.',              priceFrom: 150, options: null },
-  { id: 'private-chef', name: 'Private Chef',   emoji: '👨‍🍳', desc: 'In-villa private chef with fresh local ingredients. Choose a meal.',  priceFrom: 120, options: ['Breakfast', 'Lunch', 'Dinner'] },
+  { id: 'massage',      name: 'Massage',        icon: 'assets/icons/LOKANI ICONS-11.png', desc: 'Professional in-villa massage service. Relax and recharge.',          priceFrom: 80,  options: ['60 min', '90 min'] },
+  { id: 'iv-therapy',   name: 'IV Therapy',     icon: 'assets/icons/LOKANI ICONS-18.png', desc: 'Rejuvenating IV vitamin therapy session at your villa.',              priceFrom: 150, options: null },
+  { id: 'private-chef', name: 'Private Chef',   icon: 'assets/icons/LOKANI ICONS-12.png', desc: 'In-villa private chef with fresh local ingredients. Choose a meal.',  priceFrom: 120, options: ['Breakfast', 'Lunch', 'Dinner'] },
 ];
 
 const CELEBRATION_OPTIONS = [
-  { id: 'family',      label: 'Family Trip',          emoji: '👨‍👩‍👧‍👦' },
-  { id: 'bachelor',    label: 'Bachelor Party',       emoji: '🥂' },
-  { id: 'vacation',    label: 'Vacation',             emoji: '🏝️' },
-  { id: 'couple',      label: 'Couple',               emoji: '💑' },
-  { id: 'birthday',    label: 'Birthday',             emoji: '🎂' },
-  { id: 'none',        label: 'No specific',          emoji: '🌴' },
+  { id: 'family',      label: 'Family Trip',          icon: 'assets/icons/family_trip.png' },
+  { id: 'bachelor',    label: 'Bachelor Party',       icon: 'assets/icons/bachelor_party.png' },
+  { id: 'vacation',    label: 'Vacation',             icon: 'assets/icons/vacation_trip.png' },
+  { id: 'couple',      label: 'Couple',               icon: 'assets/icons/couple_trip.png' },
+  { id: 'birthday',    label: 'Birthday',             icon: 'assets/icons/birthday_trip.png' },
+  { id: 'none',        label: 'No specific',          icon: 'assets/icons/general_trip.png' },
 ];
 
 const KIDS_AGE_RANGES = ['Under 2', '2–4', '5–7', '8–10', '11–13', '14–17'];
@@ -85,6 +86,7 @@ const state = {
     needsTransportation: null,
   },
   transport: {
+    name: '', email: '', phone: '',
     isMultipleArrivals: false,
     arrivals: [emptyArrival()],
     needsReturn: null,
@@ -255,11 +257,17 @@ function renderStep2() {
   const d = state.data;
   const total = d.adults + d.kids;
 
-  const celebCards = CELEBRATION_OPTIONS.map(c => `
-    <div class="select-card ${d.celebration === c.id ? 'selected' : ''}" data-celebrate="${c.id}">
-      <div class="card-icon">${c.emoji}</div>
-      <div class="card-label">${c.label}</div>
-    </div>`).join('');
+  const celebCards = CELEBRATION_OPTIONS.map(c => {
+    // Some generated icons have different internal margins; we normalize them with a zoom scale
+    const scale = (c.id === 'family' || c.id === 'none') ? '145%' : '125%'; 
+    return `
+      <div class="select-card ${d.celebration === c.id ? 'selected' : ''}" data-celebrate="${c.id}">
+        <div class="card-icon" style="height:90px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
+          <div style="width:80px;height:80px;border-radius:50%;background-image:url('${c.icon}');background-size:${scale};background-position:center;background-repeat:no-repeat;border:none;"></div>
+        </div>
+        <div class="card-label">${c.label}</div>
+      </div>`;
+  }).join('');
 
   let kidsAgesHtml = '';
   if (d.kids > 0) {
@@ -349,7 +357,9 @@ function renderStep4() {
   const d = state.data;
   const cards = INTERESTS.map(i => `
     <div class="select-card ${d.interests.includes(i.id) ? 'selected' : ''}" data-interest="${i.id}">
-      <div class="card-icon">${i.emoji}</div>
+      <div class="card-icon">
+        <img src="${i.icon}" alt="${i.label}" style="width:80px;height:80px;object-fit:contain;margin:0 auto 12px;">
+      </div>
       <div class="card-label">${i.label}</div>
       <div class="card-sub">${i.desc}</div>
     </div>`).join('');
@@ -405,14 +415,9 @@ function renderStep5() {
       const isSelected = !!sel;
       const displayInterest = interest ? interest.label : t.interests[0];
       
-      const imgStyle = t.image 
-        ? `background-image: url('${t.image}'); background-size: cover; background-position: center;`
-        : `background: ${t.gradient};`;
-
       return `
         <div class="tour-card ${isSelected ? 'tour-selected' : ''}" id="tour-${t.id}">
-          <div class="tour-image" style="${imgStyle}">
-            ${!t.image ? `<span style="font-size:2.8rem">${t.emoji}</span>` : ''}
+          <div class="tour-image" style="background-image: url('${t.image}'); background-size: cover; background-position: center;">
             <div class="tour-image-label">${displayInterest}</div>
           </div>
           <div class="tour-body">
@@ -447,7 +452,10 @@ function renderStep5() {
 
     return `
       <div class="category-section">
-        <h3 class="category-header">${categoryTitle} Tours</h3>
+        <h3 class="category-header" style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+          <img src="${interest.icon}" alt="" style="width:48px;height:48px;object-fit:contain;">
+          ${categoryTitle} Tours
+        </h3>
         <div class="tours-grid">${cards}</div>
       </div>`;
   }).join('');
@@ -456,6 +464,7 @@ function renderStep5() {
     <span class="step-tag">Step 5 — Your tours</span>
     <h2>Tours we recommend for you</h2>
     <p class="multi-hint">Select the ones you're interested in — you can pick more than one.</p>
+    <div class="field-error mb-24" id="err-tours" style="display:none; text-align:center;">Please select at least one tour to continue</div>
     <div class="categorized-tours">${sections}</div>`;
 }
 
@@ -473,7 +482,9 @@ function renderStep6() {
 
     return `
       <div class="service-card ${isSelected ? 'service-selected' : ''}" id="srv-${s.id}" onclick="toggleService('${s.id}', event)">
-        <div class="service-icon">${s.emoji}</div>
+        <div class="card-icon" style="height:90px;display:flex;align-items:center;justify-content:flex-start;">
+          <img src="${s.icon}" alt="${s.name}" style="width:80px;height:80px;object-fit:contain;margin-bottom:0;">
+        </div>
         <div class="service-name">${s.name}</div>
         <div class="service-desc">${s.desc}</div>
         <div class="service-price">From $${s.priceFrom}</div>
@@ -504,12 +515,16 @@ function renderStep7() {
     <div class="field-error mb-16" id="err-transport" style="display:none;">Please select an option to continue</div>
     <div class="card-grid">
       <div class="select-card ${d.needsTransportation === true ? 'selected' : ''}" onclick="setTransportation(true)">
-        <div class="card-icon">🚐</div>
+        <div class="card-icon" style="height:90px;display:flex;align-items:center;justify-content:center;">
+          <img src="assets/icons/LOKANI ICONS-07.png" alt="Yes" style="width:80px;height:80px;object-fit:contain;">
+        </div>
         <div class="card-label">Yes, please</div>
         <div class="card-sub">I need help with transportation to/from my villa or tours.</div>
       </div>
       <div class="select-card ${d.needsTransportation === false ? 'selected' : ''}" onclick="setTransportation(false)">
-        <div class="card-icon">🏠</div>
+        <div class="card-icon" style="height:90px;display:flex;align-items:center;justify-content:center;">
+          <img src="assets/icons/LOKANI ICONS-08.png" alt="No" style="width:80px;height:80px;object-fit:contain;">
+        </div>
         <div class="card-label">No, thank you</div>
         <div class="card-sub">I already have transportation or a rental car arranged.</div>
       </div>
@@ -576,10 +591,12 @@ function renderStep8() {
         <div class="form-group">
           <label>Departure date</label>
           <input class="form-control" type="date" id="r-dep-date" value="${esc(t.returnDepartureDate)}" min="${todayStr()}">
+          <div class="field-error" id="err-r-dep-date">Please select departure date</div>
         </div>
         <div class="form-group">
           <label>Departure time</label>
           <input class="form-control" type="time" id="r-dep-time" value="${esc(t.returnDepartureTime)}">
+          <div class="field-error" id="err-r-dep-time">Please select departure time</div>
         </div>
       </div>
       <div class="form-grid">
@@ -595,6 +612,7 @@ function renderStep8() {
       <div class="form-group">
         <label>Pickup location for return</label>
         <input class="form-control" type="text" id="r-location" placeholder="Villa or address for pickup" value="${esc(t.returnLocation || d.property)}">
+        <div class="field-error" id="err-r-location">Please enter pickup location</div>
       </div>
     </div>`;
 }
@@ -913,6 +931,49 @@ function validateStep(step) {
       return false;
     }
   }
+  if (step === 5) {
+    if (state.data.selectedTours.length === 0) {
+      const el = document.getElementById('err-tours');
+      if (el) el.style.display = 'block';
+      shake('.step-nav .btn-next');
+      return false;
+    }
+  }
+  if (step === 7) {
+    if (state.data.needsTransportation === null) {
+      const el = document.getElementById('err-transport');
+      if (el) el.style.display = 'block';
+      shake('.step-nav .btn-next');
+      return false;
+    }
+  }
+  if (step === 8) {
+    let ok = true;
+    const t = state.transport;
+    
+    // Validate each arrival block
+    t.arrivals.forEach((a, i) => {
+      if (!a.houseName) { showError(`err-step-house-${i}`, true); ok = false; } else { showError(`err-step-house-${i}`, false); }
+      if (!a.arrivalDate) { showError(`err-step-date-${i}`, true); ok = false; } else { showError(`err-step-date-${i}`, false); }
+      if (!a.arrivalTime) { showError(`err-step-time-${i}`, true); ok = false; } else { showError(`err-step-time-${i}`, false); }
+      if (!a.guestCount) { showError(`err-step-guests-${i}`, true); ok = false; } else { showError(`err-step-guests-${i}`, false); }
+      if (!a.pickupSign) { showError(`err-step-sign-${i}`, true); ok = false; } else { showError(`err-step-sign-${i}`, false); }
+    });
+
+    // Validate return if active
+    if (t.needsReturn === true) {
+      const depDate = document.getElementById('r-dep-date')?.value;
+      const depTime = document.getElementById('r-dep-time')?.value;
+      const retLoc = document.getElementById('r-location')?.value.trim();
+      
+      if (!depDate) { showError('err-r-dep-date', true); ok = false; } else { showError('err-r-dep-date', false); }
+      if (!depTime) { showError('err-r-dep-time', true); ok = false; } else { showError('err-r-dep-time', false); }
+      if (!retLoc) { showError('err-r-location', true); ok = false; } else { showError('err-r-location', false); }
+    }
+
+    if (!ok) shake('.step-nav .btn-next');
+    return ok;
+  }
   return true;
 }
 
@@ -1071,6 +1132,12 @@ function toggleTour(id) {
 
   const btn = card.querySelector('.btn-select-tour');
   if (btn) btn.textContent = isSelected ? '✓ Selected — click to remove' : 'Select this tour';
+
+  // Clear error if at least one tour is selected
+  if (state.data.selectedTours.length > 0) {
+    const err = document.getElementById('err-tours');
+    if (err) err.style.display = 'none';
+  }
 }
 
 function updateTourData(id, field, value) {
@@ -1160,12 +1227,26 @@ function renderTransportForm() {
       <div class="transport-page">
         <header class="transport-topbar">
           <img src="Lokani%20Branding/lokani.web.logo.png" alt="Lokani" class="transport-topbar-logo">
-          <button class="btn-ghost" onclick="renderWelcome()" style="color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.25);">← Back</button>
         </header>
         <div class="transport-body">
-          <span class="step-tag">Transportation only</span>
-          <h2>Arrange your airport transfer</h2>
-          <p>Provide your arrival details and we'll coordinate your pickup and drop-off.</p>
+          <div class="section-title">Your details</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full name</label>
+              <input class="form-control" id="t-name" type="text" placeholder="Maria Rodriguez" value="${esc(t.name)}">
+              <div class="field-error" id="err-t-name">Please enter your name</div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input class="form-control" id="t-email" type="email" placeholder="maria@email.com" value="${esc(t.email)}">
+              <div class="field-error" id="err-t-email">Please enter a valid email</div>
+            </div>
+          </div>
+          <div class="form-group mb-24">
+            <label>Phone / WhatsApp</label>
+            <input class="form-control" id="t-phone" type="tel" placeholder="+1 (555) 000-0000" value="${esc(t.phone)}">
+            <div class="field-error" id="err-t-phone">Please enter your phone number</div>
+          </div>
 
           <div class="section-title">Arrival details</div>
           <div id="arrivals-container">${arrivalsHtml}</div>
@@ -1190,10 +1271,12 @@ function renderTransportForm() {
               <div class="form-group">
                 <label>Departure date</label>
                 <input class="form-control" type="date" id="r-dep-date" value="${esc(t.returnDepartureDate)}" min="${todayStr()}">
+                <div class="field-error" id="err-r-dep-date">Please select departure date</div>
               </div>
               <div class="form-group">
                 <label>Departure time</label>
                 <input class="form-control" type="time" id="r-dep-time" value="${esc(t.returnDepartureTime)}">
+                <div class="field-error" id="err-r-dep-time">Please select departure time</div>
               </div>
             </div>
             <div class="form-grid">
@@ -1209,6 +1292,7 @@ function renderTransportForm() {
             <div class="form-group">
               <label>Pickup location for return</label>
               <input class="form-control" type="text" id="r-location" placeholder="Villa or address for pickup" value="${esc(t.returnLocation)}">
+              <div class="field-error" id="err-r-location">Please enter pickup location</div>
             </div>
           </div>
         </div>
@@ -1236,42 +1320,47 @@ function renderArrivalBlock(arrival, index, isStep) {
       <div class="form-grid">
         <div class="form-group">
           <label>Flight number <span>(optional)</span></label>
-          <input class="form-control" type="text" placeholder="e.g. AA 1234" value="${esc(arrival.flightNumber)}"
+          <input class="form-control" id="${prefix}flight-${index}" type="text" placeholder="e.g. AA 1234" value="${esc(arrival.flightNumber)}"
             onchange="updateArrival(${index},'flightNumber',this.value)">
         </div>
         <div class="form-group">
           <label>House / property name</label>
-          <input class="form-control" type="text" placeholder="Villa name" value="${esc(arrival.houseName)}"
+          <input class="form-control" id="${prefix}house-${index}" type="text" placeholder="Villa name" value="${esc(arrival.houseName)}"
             onchange="updateArrival(${index},'houseName',this.value)">
+          <div class="field-error" id="err-${prefix}house-${index}">Please enter property name</div>
         </div>
       </div>
       <div class="form-group mb-16">
         <label>Arrival address <span>(optional)</span></label>
-        <input class="form-control" type="text" placeholder="Pickup location" value="${esc(arrival.arrivalAddress || '')}"
+        <input class="form-control" id="${prefix}addr-${index}" type="text" placeholder="Pickup location" value="${esc(arrival.arrivalAddress || '')}"
           onchange="updateArrival(${index},'arrivalAddress',this.value)">
       </div>
       <div class="form-grid">
         <div class="form-group">
           <label>Arrival date (MM/DD/YYYY)</label>
-          <input class="form-control" type="date" value="${esc(arrival.arrivalDate)}" min="${todayStr()}"
+          <input class="form-control" id="${prefix}date-${index}" type="date" value="${esc(arrival.arrivalDate)}" min="${todayStr()}"
             onchange="updateArrival(${index},'arrivalDate',this.value)">
+          <div class="field-error" id="err-${prefix}date-${index}">Please select arrival date</div>
         </div>
         <div class="form-group">
           <label>Arrival time (HH:MM AM/PM)</label>
-          <input class="form-control" type="time" value="${esc(arrival.arrivalTime)}"
+          <input class="form-control" id="${prefix}time-${index}" type="time" value="${esc(arrival.arrivalTime)}"
             onchange="updateArrival(${index},'arrivalTime',this.value)">
+          <div class="field-error" id="err-${prefix}time-${index}">Please select arrival time</div>
         </div>
       </div>
       <div class="form-grid">
         <div class="form-group">
           <label>Number of guests arriving</label>
-          <input class="form-control" type="number" min="1" placeholder="2" value="${esc(arrival.guestCount)}"
+          <input class="form-control" id="${prefix}guests-${index}" type="number" min="1" placeholder="2" value="${esc(arrival.guestCount)}"
             onchange="updateArrival(${index},'guestCount',this.value)">
+          <div class="field-error" id="err-${prefix}guests-${index}">Enter guest count</div>
         </div>
         <div class="form-group">
           <label>Name for pickup sign</label>
-          <input class="form-control" type="text" placeholder="Your last name" value="${esc(arrival.pickupSign)}"
+          <input class="form-control" id="${prefix}sign-${index}" type="text" placeholder="Your last name" value="${esc(arrival.pickupSign)}"
             onchange="updateArrival(${index},'pickupSign',this.value)">
+          <div class="field-error" id="err-${prefix}sign-${index}">Enter sign name</div>
         </div>
       </div>
       <div class="form-group">
@@ -1325,32 +1414,107 @@ function setNeedsReturn(val, isStep) {
 }
 
 function submitTransport() {
-  // Collect return fields
   const t = state.transport;
-  t.returnDepartureDate = document.getElementById('r-dep-date')?.value || '';
-  t.returnDepartureTime = document.getElementById('r-dep-time')?.value || '';
-  t.returnDate          = document.getElementById('r-ret-date')?.value || '';
-  t.returnTime          = document.getElementById('r-ret-time')?.value || '';
-  t.returnLocation      = document.getElementById('r-location')?.value || '';
+  let ok = true;
+
+  // 1. Collect & Validate Contact Info
+  t.name  = document.getElementById('t-name')?.value.trim() || '';
+  t.email = document.getElementById('t-email')?.value.trim() || '';
+  t.phone = document.getElementById('t-phone')?.value.trim() || '';
+
+  if (!t.name) { showError('err-t-name', true); ok = false; } else { showError('err-t-name', false); }
+  if (!t.email || !t.email.includes('@')) { showError('err-t-email', true); ok = false; } else { showError('err-t-email', false); }
+  if (!t.phone) { showError('err-t-phone', true); ok = false; } else { showError('err-t-phone', false); }
+
+  // 2. Validate Arrivals
+  t.arrivals.forEach((a, i) => {
+    // Villa/House Name
+    if (!a.houseName) { showError(`err-house-${i}`, true); ok = false; } else { showError(`err-house-${i}`, false); }
+    // Arrival Date
+    if (!a.arrivalDate) { showError(`err-date-${i}`, true); ok = false; } else { showError(`err-date-${i}`, false); }
+    // Arrival Time
+    if (!a.arrivalTime) { showError(`err-time-${i}`, true); ok = false; } else { showError(`err-time-${i}`, false); }
+    // Guest Count
+    if (!a.guestCount || parseInt(a.guestCount) <= 0) { showError(`err-guests-${i}`, true); ok = false; } else { showError(`err-guests-${i}`, false); }
+    // Pickup Sign
+    if (!a.pickupSign) { showError(`err-sign-${i}`, true); ok = false; } else { showError(`err-sign-${i}`, false); }
+  });
+
+  // 3. Collect & Validate Return (if active)
+  if (t.needsReturn === null) {
+     // No active check for the yes/no buttons specifically but we should ensure it's set if necessary
+     // Usually better to default to No if not explicitly Yes.
+  }
+  
+  if (t.needsReturn === true) {
+    t.returnDepartureDate = document.getElementById('r-dep-date')?.value || '';
+    t.returnDepartureTime = document.getElementById('r-dep-time')?.value || '';
+    t.returnLocation      = document.getElementById('r-location')?.value.trim() || '';
+    
+    if (!t.returnDepartureDate) { showError('err-r-dep-date', true); ok = false; } else { showError('err-r-dep-date', false); }
+    if (!t.returnDepartureTime) { showError('err-r-dep-time', true); ok = false; } else { showError('err-r-dep-time', false); }
+    if (!t.returnLocation)      { showError('err-r-location', true); ok = false; } else { showError('err-r-location', false); }
+    
+    // Optional fields
+    t.returnDate = document.getElementById('r-ret-date')?.value || '';
+    t.returnTime = document.getElementById('r-ret-time')?.value || '';
+  }
+
+  if (!ok) {
+    shake('.step-nav .btn-submit');
+    // Scroll to first error for better UX
+    const firstErr = document.querySelector('.field-error.visible');
+    if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
   console.log('Transport submitted:', JSON.stringify(t, null, 2));
   renderTransportConfirmation();
 }
 
 function renderTransportConfirmation() {
-  const firstArrival = state.transport.arrivals[0];
+  const t = state.transport;
+  const firstArrival = t.arrivals[0];
+  
   document.getElementById('app').innerHTML = `
     <div class="screen active" id="screen-transport-confirm">
       <div class="confirm-page">
         <img src="Lokani%20Branding/lokani.web.logo.png" alt="Lokani Tours" class="confirm-logo" style="filter:brightness(0) invert(1)">
         <div class="confirm-icon">✓</div>
-        <h2>Transfer request<br><em style="font-style:italic;color:rgba(255,255,255,0.75);">received!</em></h2>
+        <h2>Request received,<br><em style="font-style:italic;color:rgba(255,255,255,0.75);">${t.name.split(' ')[0]}!</em></h2>
         <p>Our team will confirm your transportation details within 24 hours. You'll receive all pickup information via WhatsApp or email.</p>
+        
         <div class="confirm-details">
-          <div class="confirm-detail-row"><span>Arrivals</span><span>${state.transport.arrivals.length} group${state.transport.arrivals.length > 1 ? 's' : ''}</span></div>
-          ${firstArrival.arrivalDate ? `<div class="confirm-detail-row"><span>First arrival</span><span>${formatDate(firstArrival.arrivalDate)}</span></div>` : ''}
-          <div class="confirm-detail-row"><span>Return transfer</span><span>${state.transport.needsReturn ? 'Yes' : 'No'}</span></div>
+          <div class="confirm-detail-row">
+            <span>Name</span>
+            <span>${esc(t.name)}</span>
+          </div>
+          <div class="confirm-detail-row">
+            <span>Email</span>
+            <span>${esc(t.email)}</span>
+          </div>
+          <div class="confirm-detail-row">
+            <span>Phone</span>
+            <span>${esc(t.phone)}</span>
+          </div>
+          <div class="confirm-detail-row">
+            <span>Arrival Groups</span>
+            <span>${t.arrivals.length} group${t.arrivals.length !== 1 ? 's' : ''}</span>
+          </div>
+          ${firstArrival.arrivalDate ? `
+          <div class="confirm-detail-row">
+            <span>First Arrival</span>
+            <span>${formatDate(firstArrival.arrivalDate)}</span>
+          </div>` : ''}
+          <div class="confirm-detail-row">
+            <span>Return Transfer</span>
+            <span>${t.needsReturn ? 'Yes' : 'No'}</span>
+          </div>
         </div>
-        <button class="btn-start-over" onclick="location.reload()">← Start a new request</button>
+        
+        <button class="btn-start-over" onclick="location.reload()">
+          ← Start a new request
+        </button>
       </div>
     </div>`;
 }

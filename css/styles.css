@@ -1,8 +1,8 @@
 /* ─── Variables ─────────────────────────────────────────────────────────── */
 :root {
   --teal:        #00383b;
-  --teal-dark:   #00282b;
-  --teal-light:  #1a4c4e;
+  --teal-dark:   #002528;
+  --teal-light:  #004c50;
   --pink:        #D10069;
   --pink-light:  #F7E6F0;
   --black:       #1A1A1A;
@@ -301,13 +301,13 @@ a { text-decoration: none; color: inherit; }
   box-shadow: none;
 }
 .btn-submit {
-  background: var(--pink);
+  background: var(--teal);
   font-size: 1rem;
   padding: 14px 40px;
 }
 .btn-submit:hover {
-  background: #b8005c;
-  box-shadow: 0 6px 24px rgba(209,0,105,0.3);
+  background: var(--teal-dark);
+  box-shadow: 0 6px 24px rgba(0, 56, 59, 0.3);
 }
 
 /* ─── Form Fields ────────────────────────────────────────────────────────── */
@@ -808,14 +808,15 @@ select.form-control {
   background: var(--cream);
 }
 .transport-topbar {
-  background: var(--teal);
+  background: var(--white);
   padding: 0 32px;
   height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--gray-200);
 }
-.transport-topbar-logo { height: 30px; width: auto; filter: brightness(0) invert(1); }
+.transport-topbar-logo { height: 30px; width: auto; }
 .transport-body {
   flex: 1;
   max-width: 680px;
@@ -990,56 +991,73 @@ select.form-control {
 .confirm-page {
   min-height: 100vh;
   background: var(--teal);
+  background-image: radial-gradient(circle at top left, var(--teal-light), transparent 40%),
+                    radial-gradient(circle at bottom right, var(--teal-dark), transparent 40%),
+                    linear-gradient(160deg, var(--teal-dark) 0%, var(--teal) 50%, var(--teal-dark) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 48px 24px;
+  padding: 60px 24px;
 }
-.confirm-logo { height: 44px; width: auto; filter: brightness(0) invert(1); margin: 0 auto 48px; }
+.confirm-logo { height: 48px; width: auto; filter: brightness(0) invert(1); margin: 0 auto 56px; }
 .confirm-icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.12);
+  background: var(--white);
+  color: var(--teal);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 28px;
-  font-size: 2.2rem;
+  margin: 0 auto 32px;
+  font-size: 2.8rem;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  animation: scaleIn 0.52s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
 }
 .confirm-page h2 {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 500;
   color: var(--white);
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+  line-height: 1.1;
 }
 .confirm-page p {
-  color: rgba(255,255,255,0.75);
-  font-size: 1rem;
-  max-width: 420px;
+  color: rgba(255,255,255,0.85);
+  font-size: 1.15rem;
+  max-width: 480px;
   line-height: 1.7;
   font-weight: 300;
-  margin: 0 auto 40px;
+  margin: 0 auto 52px;
 }
 .confirm-details {
-  background: rgba(255,255,255,0.1);
-  border-radius: var(--radius);
-  padding: 24px 32px;
-  max-width: 380px;
-  margin: 0 auto 40px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px 60px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 52px;
   text-align: left;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.2);
+  color: var(--black);
 }
 .confirm-detail-row {
   display: flex;
   justify-content: space-between;
-  font-size: 0.88rem;
-  padding: 6px 0;
-  color: rgba(255,255,255,0.9);
+  align-items: center;
+  font-size: 1.05rem;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
 }
-.confirm-detail-row span:first-child { color: rgba(255,255,255,0.6); }
+.confirm-detail-row:last-child { border-bottom: none; }
+.confirm-detail-row span:first-child { color: var(--gray-500); font-weight: 400; }
+.confirm-detail-row span:last-child { color: var(--black); font-weight: 600; }
 .btn-start-over {
   display: inline-flex;
   align-items: center;
