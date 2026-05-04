@@ -29,22 +29,25 @@ const INTERESTS = [
 ];
 
 const TOURS = [
-  { id: 'atv',             name: 'ATV Tour',             tagline: 'Off-road jungle adventure',      interests: ['adventure'],            tiers: ['100-150','150-250','250+'], priceFrom: 75,  duration: '3–4 hours',          emoji: '🏍️',  image: 'assets/atv.png',  gradient: 'linear-gradient(135deg,#5D4037,#A1643E)',  desc: 'Explore rugged Costa Rica terrain on an exciting ATV adventure through jungle trails and scenic overlooks.' },
-  { id: 'horseback',       name: 'Horseback Riding',     tagline: 'Coastal trail rides',            interests: ['adventure','wildlife'],  tiers: ['65-100','100-150','150-250','250+'], priceFrom: 70,  duration: '2–3 hours',          emoji: '🐴',  image: 'assets/horseback.png', gradient: 'linear-gradient(135deg,#BF360C,#E64A19)',  desc: 'Ride through scenic coastal trails, tropical forests, and stunning ocean overlooks with expert guides.' },
+  { id: 'atv',             name: 'ATV Tour',             tagline: 'Off-road jungle adventure',      interests: ['adventure'],            tiers: ['100-150','150-250','250+'], priceFrom: 75,  duration: '3–4 hours',          emoji: '🏍️',  image: 'assets/atv.png',  gradient: 'linear-gradient(135deg,#5D4037,#A1643E)',  desc: 'Explore rugged Costa Rica terrain on an exciting ATV adventure through jungle trails and scenic overlooks.', durationOptions: ['2h', '3h', '4h'] },
+  { id: 'horseback',       name: 'Horseback Riding',     tagline: 'Coastal trail rides',            interests: ['adventure','wildlife'],  tiers: ['65-100','100-150','150-250','250+'], priceFrom: 70,  duration: '2–3 hours',          emoji: '🐴',  image: 'assets/horseback.png', gradient: 'linear-gradient(135deg,#BF360C,#E64A19)',  desc: 'Ride through scenic coastal trails, tropical forests, and stunning ocean overlooks with expert guides.', timeOptions: ['AM', 'PM'], durationOptions: ['2h', '3h', '4h'] },
   { id: 'monkeys',         name: 'Monkey Tour',          tagline: 'Meet the jungle locals',         interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🐒',  image: 'assets/monkeys.png', gradient: 'linear-gradient(135deg,#33691E,#558B2F)',  desc: 'Get up close with howler and white-faced monkeys in their natural tropical habitat. A must for nature lovers.' },
-  { id: 'crocodile',       name: 'Crocodile Tour',       tagline: 'River wildlife adventure',       interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🐊',  image: 'assets/crocodile.png', gradient: 'linear-gradient(135deg,#827717,#B39000)',  desc: 'Cruise the Tarcoles River and spot massive American crocodiles in the wild up close.' },
-  { id: 'snorkeling',      name: 'Snorkeling',           tagline: 'Discover marine life',           interests: ['ocean'],                tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🤿',  image: 'assets/snorkeling.png', gradient: 'linear-gradient(135deg,#00838F,#00ACC1)',  desc: 'Discover vibrant marine life in the crystal-clear Pacific waters near the coastline.' },
-  { id: 'zipline',         name: 'Zipline',              tagline: 'Fly through the canopy',         interests: ['adventure'],            tiers: ['65-100','100-150','150-250','250+'], priceFrom: 120, duration: '3 hours',            emoji: '🪂',  image: 'assets/zipline.png', gradient: 'linear-gradient(135deg,#2E7D32,#43A047)',  desc: 'Soar through the jungle canopy on thrilling ziplines with breathtaking panoramic views of the valley.' },
+  { id: 'crocodile',       name: 'Crocodile Tour',       tagline: 'River wildlife adventure',       interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🐊',  image: 'assets/crocodile.png', gradient: 'linear-gradient(135deg,#827717,#B39000)',  desc: 'Cruise the Tarcoles River and spot massive American crocodiles in the wild up close.', timeOptions: ['AM', 'PM'] },
+  { id: 'snorkeling',      name: 'Snorkeling',           tagline: 'Discover marine life',           interests: ['ocean'],                tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🤿',  image: 'assets/snorkeling.png', gradient: 'linear-gradient(135deg,#00838F,#00ACC1)',  desc: 'Discover vibrant marine life in the crystal-clear Pacific waters near the coastline.', durationOptions: ['2h', '3h', '4h'] },
+  { id: 'zipline',         name: 'Zipline',              tagline: 'Fly through the canopy',         interests: ['adventure'],            tiers: ['65-100','100-150','150-250','250+'], priceFrom: 120, duration: '3 hours',            emoji: '🪂',  image: 'assets/zipline.png', gradient: 'linear-gradient(135deg,#2E7D32,#43A047)',  desc: 'Soar through the jungle canopy on thrilling ziplines with breathtaking panoramic views of the valley.', timeOptions: ['AM', 'PM'] },
   { id: 'rafting',         name: 'White Water Rafting',  tagline: 'River rapids adventure',         interests: ['adventure'],            tiers: ['100-150','150-250','250+'],          priceFrom: 95,  duration: '4 hours',            emoji: '🚣',  image: 'assets/rafting.png', gradient: 'linear-gradient(135deg,#0277BD,#01579B)',  desc: 'Experience the thrill of navigating high-energy river rapids through lush tropical canyons with expert guides.' },
-  { id: 'jetski',          name: 'Jet Ski',              tagline: 'Race across the waves',          interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 110, duration: '1–2 hours',          emoji: '🌊',  image: 'assets/jetski.png',  gradient: 'linear-gradient(135deg,#006064,#00838F)',  desc: 'Race across the Pacific waves on a thrilling jet ski adventure along the stunning coastline.' },
-  { id: 'jetsailing',      name: 'Jet Sailing',          tagline: 'Speed meets serenity',           interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 130, duration: '3–4 hours',          emoji: '⛵',  image: 'assets/jetsailing.png', gradient: 'linear-gradient(135deg,#1A237E,#283593)',  desc: 'The ultimate combo — high-speed jet boat and serene sailing along the stunning coastline.' },
-  { id: 'bioluminescence', name: 'Bioluminescence Tour', tagline: 'Magic glowing waters at night',  interests: ['ocean','wildlife'],     tiers: ['100-150','150-250','250+'],          priceFrom: 115, duration: '2–3 hrs (evening)',  emoji: '✨',  image: 'assets/bioluminescence.png', gradient: 'linear-gradient(135deg,#1A1A2E,#0F3460)',  desc: 'Paddle through glowing bioluminescent waters in a truly magical evening kayaking experience.' },
+  { id: 'jetski',          name: 'Jet Ski',              tagline: 'Race across the waves',          interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 110, duration: '1–2 hours',          emoji: '🌊',  image: 'assets/jetski.png',  gradient: 'linear-gradient(135deg,#006064,#00838F)',  desc: 'Race across the Pacific waves on a thrilling jet ski adventure along the stunning coastline.', durationOptions: ['2h', '3h', '4h'] },
+  { id: 'jetsailing',      name: 'Jet Sailing',          tagline: 'Speed meets serenity',           interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 130, duration: '3–4 hours',          emoji: '⛵',  image: 'assets/jetsailing.png', gradient: 'linear-gradient(135deg,#1A237E,#283593)',  desc: 'The ultimate combo — high-speed jet boat and serene sailing along the stunning coastline.', durationOptions: ['2h', '3h', '4h'] },
+  { id: 'bioluminescence', name: 'Bioluminescence Tour', tagline: 'Magic glowing waters at night',  interests: ['ocean','wildlife'],     tiers: ['100-150','150-250','250+'],          priceFrom: 115, duration: '2–3 hrs (evening)',  emoji: '✨',  image: 'assets/bioluminescence.png', gradient: 'linear-gradient(135deg,#1A1A2E,#0F3460)',  desc: 'Paddle through glowing bioluminescent waters in a truly magical evening kayaking experience.', durationOptions: ['2h', '3h', '4h'] },
   { id: 'tortuga',         name: 'Tortuga Island',       tagline: 'Paradise island escape',         interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 125, duration: 'Full day',            emoji: '🏝️', image: 'assets/tortuga.png', gradient: 'linear-gradient(135deg,#00695C,#00897B)',  desc: 'Sail to stunning Tortuga Island for world-class snorkeling, pristine beaches, and a delicious lunch.' },
-  { id: 'paragliding',     name: 'Paragliding',          tagline: 'Soar above the coast',           interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 165, duration: '2 hours',            emoji: '🪁',  image: 'assets/paragliding.png', gradient: 'linear-gradient(135deg,#1565C0,#1976D2)',  desc: 'Fly high above the coast and jungle with a professional paragliding guide. Unforgettable views await.' },
+  { id: 'paragliding',     name: 'Paragliding',          tagline: 'Soar above the coast',           interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 165, duration: '2 hours',            emoji: '🪁',  image: 'assets/paragliding.png', gradient: 'linear-gradient(135deg,#1565C0,#1976D2)',  desc: 'Fly high above the coast and jungle with a professional paragliding guide. Unforgettable views await.', timeOptions: ['AM', 'PM'] },
   { id: 'fishing',         name: 'Sport Fishing',        tagline: 'Offshore fishing',               interests: ['ocean'],                tiers: ['250+'],                             priceFrom: 200, duration: 'Full day',            emoji: '🎣',  image: 'assets/fishing.png', gradient: 'linear-gradient(135deg,#01579B,#0277BD)',  desc: 'World-class offshore fishing for marlin, sailfish, and dorado with expert local guides.' },
   { id: 'sailing',         name: 'Private Sailing',      tagline: 'Luxury sunset charter',          interests: ['ocean','relaxation'],   tiers: ['250+'],                             priceFrom: 250, duration: 'Half or full day',   emoji: '🌅',  image: 'assets/sailing.png', gradient: 'linear-gradient(135deg,#4A148C,#6A1B9A)',  desc: 'Private sailing charter along the stunning Pacific coastline. Perfect for sunset or a full-day escape.' },
-  { id: 'surf',            name: 'Surf Lessons',         tagline: 'Catch your first wave',          interests: ['ocean','adventure'],    tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '🏄‍♂️', image: 'assets/surf.png', gradient: 'linear-gradient(135deg,#0097A7,#00BCD4)',  desc: 'Learn to surf with professional local instructors at some of the world’s best beginner breaks.' },
+  { id: 'surf',            name: 'Surf Lessons',         tagline: 'Catch your first wave',          interests: ['ocean','adventure'],    tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '🏄‍♂️', image: 'assets/surf.png', gradient: 'linear-gradient(135deg,#0097A7,#00BCD4)',  desc: 'Learn to surf with professional local instructors at some of the world’s best beginner breaks.', timeOptions: ['AM', 'PM'] },
   { id: 'coffee',          name: 'Coffee & Tasting',     tagline: 'Authentic local flavors',        interests: ['food'],                 tiers: ['100-150','150-250','250+'],          priceFrom: 65,  duration: '2 hours',            emoji: '☕',  image: 'assets/coffee.png', gradient: 'linear-gradient(135deg,#795548,#8D6E63)',  desc: 'Discover the rich history of Costa Rican coffee followed by a traditional Guaro spirit tasting session.' },
+  { id: 'volcano',         name: 'Volcano Tour',         tagline: 'Majestic peaks & hot springs',   interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 180, duration: 'Full day',            emoji: '🌋',  image: 'assets/volcano.png', gradient: 'linear-gradient(135deg,#BF360C,#3E2723)',  desc: 'Journey to the base of a majestic volcano, explore ancient lava flows, and relax in natural thermal hot springs.' },
+  { id: 'chocolate',       name: 'Chocolate Tasting',    tagline: 'The art of cocoa',               interests: ['food'],                 tiers: ['65-100','100-150','150-250','250+'], priceFrom: 55,  duration: '2 hours',            emoji: '🍫',  image: 'assets/chocolate.png', gradient: 'linear-gradient(135deg,#3E2723,#5D4037)',  desc: 'Discover the secrets of artisanal chocolate making, from bean to bar, with delicious tastings of premium organic cocoa.', timeOptions: ['AM', 'PM'] },
+  { id: 'partyboat',       name: 'Sunset Party Boat',    tagline: 'Music, drinks & ocean vibes',    interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 95,  duration: '4 hours',            emoji: '🍹',  image: 'assets/party_boat.png', gradient: 'linear-gradient(135deg,#FF6F00,#E65100)',  desc: 'Dance the afternoon away on a luxury catamaran with live music, open bar, and the best sunset views on the coast.' },
 ];
 
 
@@ -52,6 +55,7 @@ const EXTRA_SERVICES = [
   { id: 'massage',      name: 'Massage',        icon: 'assets/icons/LOKANI ICONS-11.png', desc: 'Professional in-villa massage service. Relax and recharge.',          priceFrom: 80,  options: ['60 min', '90 min'] },
   { id: 'iv-therapy',   name: 'IV Therapy',     icon: 'assets/icons/LOKANI ICONS-18.png', desc: 'Rejuvenating IV vitamin therapy session at your villa.',              priceFrom: 150, options: null },
   { id: 'private-chef', name: 'Private Chef',   icon: 'assets/icons/LOKANI ICONS-12.png', desc: 'In-villa private chef with fresh local ingredients. Choose a meal.',  priceFrom: 120, options: ['Breakfast', 'Lunch', 'Dinner'] },
+  { id: 'bartender',    name: 'Bartender',      icon: 'assets/icons/LOKANI ICONS-21.png', desc: 'Professional mixologist to prepare fresh tropical cocktails at your villa.', priceFrom: 60,  options: ['4 hours', 'Full evening'] },
 ];
 
 const CELEBRATION_OPTIONS = [
@@ -435,19 +439,37 @@ function renderStep5() {
             </button>
           </div>
           
-          <div class="tour-booking-form">
-            <div class="booking-grid">
-              <div class="form-group">
-                <label>Preferred date</label>
-                <input class="form-control" type="date" id="tour-date-${t.id}" value="${esc(sel?.date || '')}" min="${todayStr()}" onchange="updateTourData('${t.id}','date',this.value)">
+            <div class="tour-booking-form">
+              <div class="booking-grid">
+                <div class="form-group">
+                  <label>Preferred date</label>
+                  <input class="form-control" type="date" id="tour-date-${t.id}" value="${esc(sel?.date || '')}" min="${todayStr()}" onchange="updateTourData('${t.id}','date',this.value)">
+                </div>
+                <div class="form-group">
+                  <label>Guests</label>
+                  <input class="form-control" type="number" id="tour-guests-${t.id}" min="1" value="${sel?.guests || (state.data.adults + state.data.kids)}" onchange="updateTourData('${t.id}','guests',this.value)">
+                </div>
               </div>
-              <div class="form-group">
-                <label>Guests</label>
-                <input class="form-control" type="number" id="tour-guests-${t.id}" min="1" value="${sel?.guests || (state.data.adults + state.data.kids)}" onchange="updateTourData('${t.id}','guests',this.value)">
-              </div>
+              ${t.durationOptions ? `
+                <div class="form-group" style="margin-top:12px;">
+                  <label>Preferred duration</label>
+                  <div class="option-chips" style="margin-top:4px;">
+                    ${t.durationOptions.map(o => 
+                      `<span class="option-chip ${sel?.durationOption === o ? 'active' : ''}" onclick="setTourDuration('${t.id}','${o}',this)">${o}</span>`
+                    ).join('')}
+                  </div>
+                </div>` : ''}
+              ${t.timeOptions ? `
+                <div class="form-group" style="margin-top:12px;">
+                  <label>Preferred time</label>
+                  <div class="option-chips" style="margin-top:4px;">
+                    ${t.timeOptions.map(o => 
+                      `<span class="option-chip ${sel?.time === o ? 'active' : ''}" onclick="setTourTime('${t.id}','${o}',this)">${o}</span>`
+                    ).join('')}
+                  </div>
+                </div>` : ''}
             </div>
-          </div>
-        </div>`;
+          </div>`;
     }).join('');
 
     return `
@@ -492,6 +514,8 @@ function renderStep6() {
           ${s.options ? `<label>Choose option</label>${optionChips}` : ''}
           <label>Preferred date <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.78rem">(optional)</span></label>
           <input class="form-control" type="date" value="${esc(sel?.date || '')}" min="${todayStr()}" onchange="updateServiceData('${s.id}','date',this.value)">
+          <label>Preferred time <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.78rem">(optional)</span></label>
+          <input class="form-control" type="time" value="${esc(sel?.time || '')}" onchange="updateServiceData('${s.id}','time',this.value)">
           <label>Notes <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.78rem">(optional)</span></label>
           <input class="form-control" type="text" placeholder="Any special requests…" value="${esc(sel?.notes || '')}" onchange="updateServiceData('${s.id}','notes',this.value)">
         </div>
@@ -502,7 +526,16 @@ function renderStep6() {
     <span class="step-tag">Step 6 — Enhance your stay</span>
     <h2>Would you like to add any extra services?</h2>
     <p>All optional — add what sounds good and we'll include it in your reservation.</p>
-    <div class="services-grid">${cards}</div>`;
+    <div class="services-grid">
+      ${cards}
+      <div class="service-card ${d.selectedServices.length === 0 ? 'service-selected' : ''}" id="srv-none" onclick="clearServices()">
+        <div class="card-icon" style="height:90px;display:flex;align-items:center;justify-content:flex-start;">
+          <img src="assets/icons/LOKANI ICONS-08.png" alt="No" style="width:80px;height:80px;object-fit:contain;">
+        </div>
+        <div class="service-name">No, thank you</div>
+        <div class="service-desc">I am not interested in any extra services at this time.</div>
+      </div>
+    </div>`;
 }
 
 /* ─── Step 7: Transportation Inquiry ─────────────────────────────────────── */
@@ -645,7 +678,10 @@ function renderStep9() {
           <div class="review-list-item">
             <div class="review-list-main">${tour.name}</div>
             <div class="review-list-sub">
-              ${s.date ? `Date: ${formatShortDate(s.date)}` : 'Date TBD'} · ${s.guests} guest${s.guests !== 1 ? 's' : ''}
+              ${s.date ? `Date: ${formatShortDate(s.date)}` : 'Date TBD'} 
+              ${s.durationOption ? `· <span style="font-weight:600;color:var(--teal);">${s.durationOption}</span>` : ''} 
+              ${s.time ? `· <span style="font-weight:600;color:var(--teal);">${s.time}</span>` : ''} 
+              · ${s.guests} guest${s.guests !== 1 ? 's' : ''}
             </div>
           </div>`;
       }).join('')
@@ -660,7 +696,7 @@ function renderStep9() {
           <div class="review-list-item">
             <div class="review-list-main">${srv.name}${s.option ? ` (${s.option})` : ''}</div>
             <div class="review-list-sub">
-              ${s.date ? `Date: ${formatShortDate(s.date)}` : 'Date TBD'} · ${guestCount} guest${guestCount !== 1 ? 's' : ''}
+              ${s.date ? `Date: ${formatShortDate(s.date)}` : 'Date TBD'} ${s.time ? `· @ ${s.time}` : ''} · ${guestCount} guest${guestCount !== 1 ? 's' : ''}
             </div>
           </div>`;
       }).join('')
@@ -1120,7 +1156,7 @@ function setKidAge(idx, age) {
 function toggleTour(id) {
   const idx = state.data.selectedTours.findIndex(s => s.id === id);
   if (idx === -1) {
-    state.data.selectedTours.push({ id, date: '', guests: state.data.adults, breakdown: '' });
+    state.data.selectedTours.push({ id, date: '', guests: state.data.adults, time: null, durationOption: null, breakdown: '' });
   } else {
     state.data.selectedTours.splice(idx, 1);
   }
@@ -1145,6 +1181,24 @@ function updateTourData(id, field, value) {
   if (entry) entry[field] = value;
 }
 
+function setTourDuration(id, duration, el) {
+  updateTourData(id, 'durationOption', duration);
+  const parent = el.parentElement;
+  if (parent) {
+    parent.querySelectorAll('.option-chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+  }
+}
+
+function setTourTime(id, time, el) {
+  updateTourData(id, 'time', time);
+  const parent = el.parentElement;
+  if (parent) {
+    parent.querySelectorAll('.option-chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+  }
+}
+
 /* ─── Service Selection ──────────────────────────────────────────────────── */
 function toggleService(id, event) {
   // Don't toggle if clicking inside the form
@@ -1152,13 +1206,12 @@ function toggleService(id, event) {
 
   const idx = state.data.selectedServices.findIndex(s => s.id === id);
   if (idx === -1) {
-    state.data.selectedServices.push({ id, option: null, date: '', notes: '' });
+    state.data.selectedServices.push({ id, option: null, date: '', time: '', notes: '' });
   } else {
     state.data.selectedServices.splice(idx, 1);
   }
 
-  const card = document.getElementById(`srv-${id}`);
-  if (card) card.classList.toggle('service-selected');
+  renderStep();
 }
 
 function setServiceOption(id, option) {
@@ -1183,6 +1236,11 @@ function setServiceOption(id, option) {
 function updateServiceData(id, field, value) {
   const entry = state.data.selectedServices.find(s => s.id === id);
   if (entry) entry[field] = value;
+}
+
+function clearServices() {
+  state.data.selectedServices = [];
+  renderStep();
 }
 
 /* ─── Submit ─────────────────────────────────────────────────────────────── */
