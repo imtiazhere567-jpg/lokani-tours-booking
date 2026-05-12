@@ -14,10 +14,10 @@ const PROPERTIES = [
 ];
 
 const BUDGET_OPTIONS = [
-  { id: '65-100',   label: '$65 – $100',   desc: 'per person', tours: 'Ziplining, Horseback Riding, Monkey Tour, Crocodile Tour' },
-  { id: '100-150',  label: '$100 – $150',  desc: 'per person', tours: 'ATV Tour, Surf Lessons, Coffee & Tasting, Jet Skiing' },
-  { id: '150-250',  label: '$150 – $250',  desc: 'per person', tours: 'Tortuga Island, Paragliding, and more' },
-  { id: '250+',     label: '$250+',        desc: 'per person', tours: 'Private Sailing, fishing tours, and premium experiences' },
+  { id: '65-100',   label: '$65 – $100',   desc: '(per person)', tours: 'Ziplining, Horseback Riding, Monkey Tour, Crocodile Tour' },
+  { id: '100-150',  label: '$100 – $150',  desc: '(per person)', tours: 'ATV Tour, Surf Lessons, Coffee & Tasting, Jet Skiing' },
+  { id: '150-250',  label: '$150 – $250',  desc: '(per person)', tours: 'Tortuga Island, Paragliding, and more' },
+  { id: '250+',     label: '$250+',        desc: '(per person)', tours: 'Private Sailing, fishing tours, and premium experiences' },
 ];
 
 const INTERESTS = [
@@ -29,33 +29,31 @@ const INTERESTS = [
 ];
 
 const TOURS = [
-  { id: 'atv',             name: 'ATV Tour',             tagline: 'Off-road jungle adventure',      interests: ['adventure'],            tiers: ['100-150','150-250','250+'], priceFrom: 75,  duration: '3–4 hours',          emoji: '🏍️',  image: 'assets/atv.jpg',  gradient: 'linear-gradient(135deg,#5D4037,#A1643E)',  desc: 'Explore rugged Costa Rica terrain on an exciting ATV adventure through jungle trails and scenic overlooks.', durationOptions: ['2h', '3h', '4h'] },
-  { id: 'horseback',       name: 'Horseback Riding',     tagline: 'Coastal trail rides',            interests: ['adventure','wildlife'],  tiers: ['65-100','100-150','150-250','250+'], priceFrom: 70,  duration: '2–3 hours',          emoji: '🐴',  image: 'assets/horseback.jpg', gradient: 'linear-gradient(135deg,#BF360C,#E64A19)',  desc: 'Ride through scenic coastal trails, tropical forests, and stunning ocean overlooks with expert guides.', timeOptions: ['AM', 'PM'], durationOptions: ['2h', '3h', '4h'] },
-  { id: 'monkeys',         name: 'Monkey Tour',          tagline: 'Meet the jungle locals',         interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🐒',  image: 'assets/monkeys.jpg', gradient: 'linear-gradient(135deg,#33691E,#558B2F)',  desc: 'Get up close with howler and white-faced monkeys in their natural tropical habitat. A must for nature lovers.' },
-  { id: 'crocodile',       name: 'Crocodile Tour',       tagline: 'River wildlife adventure',       interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🐊',  image: 'assets/crocodile.jpg', gradient: 'linear-gradient(135deg,#827717,#B39000)',  desc: 'Cruise the Tarcoles River and spot massive American crocodiles in the wild up close.', timeOptions: ['AM', 'PM'] },
-  { id: 'snorkeling',      name: 'Snorkeling',           tagline: 'Discover marine life',           interests: ['ocean'],                tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🤿',  image: 'assets/snorkeling.jpg', gradient: 'linear-gradient(135deg,#00838F,#00ACC1)',  desc: 'Discover vibrant marine life in the crystal-clear Pacific waters near the coastline.', durationOptions: ['2h', '3h', '4h'] },
-  { id: 'zipline',         name: 'Zipline',              tagline: 'Fly through the canopy',         interests: ['adventure'],            tiers: ['65-100','100-150','150-250','250+'], priceFrom: 120, duration: '3 hours',            emoji: '🪂',  image: 'assets/zipline.jpg', gradient: 'linear-gradient(135deg,#2E7D32,#43A047)',  desc: 'Soar through the jungle canopy on thrilling ziplines with breathtaking panoramic views of the valley.', timeOptions: ['AM', 'PM'] },
-  { id: 'rafting',         name: 'White Water Rafting',  tagline: 'River rapids adventure',         interests: ['adventure'],            tiers: ['100-150','150-250','250+'],          priceFrom: 95,  duration: '4 hours',            emoji: '🚣',  image: 'assets/rafting.jpg', gradient: 'linear-gradient(135deg,#0277BD,#01579B)',  desc: 'Experience the thrill of navigating high-energy river rapids through lush tropical canyons with expert guides.' },
-  { id: 'jetski',          name: 'Jet Ski',              tagline: 'Race across the waves',          interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 110, duration: '1–2 hours',          emoji: '🌊',  image: 'assets/jetski.jpg',  gradient: 'linear-gradient(135deg,#006064,#00838F)',  desc: 'Race across the Pacific waves on a thrilling jet ski adventure along the stunning coastline.', durationOptions: ['2h', '3h', '4h'] },
-  { id: 'jetsailing',      name: 'Jet Sailing',          tagline: 'Speed meets serenity',           interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 130, duration: '3–4 hours',          emoji: '⛵',  image: 'assets/jetsailing.jpg', gradient: 'linear-gradient(135deg,#1A237E,#283593)',  desc: 'The ultimate combo — high-speed jet boat and serene sailing along the stunning coastline.', durationOptions: ['2h', '3h', '4h'] },
-  { id: 'bioluminescence', name: 'Bioluminescence Tour', tagline: 'Magic glowing waters at night',  interests: ['ocean','wildlife'],     tiers: ['100-150','150-250','250+'],          priceFrom: 115, duration: '2–3 hrs (evening)',  emoji: '✨',  image: 'assets/bioluminescence.jpg', gradient: 'linear-gradient(135deg,#1A1A2E,#0F3460)',  desc: 'Paddle through glowing bioluminescent waters in a truly magical evening kayaking experience.', durationOptions: ['2h', '3h', '4h'] },
-  { id: 'tortuga',         name: 'Tortuga Island',       tagline: 'Paradise island escape',         interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 125, duration: 'Full day',            emoji: '🏝️', image: 'assets/tortuga.jpg', gradient: 'linear-gradient(135deg,#00695C,#00897B)',  desc: 'Sail to stunning Tortuga Island for world-class snorkeling, pristine beaches, and a delicious lunch.' },
+  { id: 'atv',             name: 'ATV Tour',             tagline: 'Off-road jungle adventure',      interests: ['adventure'],            tiers: ['100-150','150-250','250+'], priceFrom: 70,  duration: '2–4 hours',          emoji: '🏍️',  image: 'assets/atv.jpg',  gradient: 'linear-gradient(135deg,#5D4037,#A1643E)',  desc: 'Explore rugged Costa Rica terrain on an exciting ATV adventure through jungle trails and scenic overlooks.', durationOptions: ['2h ($70)', '3h ($95)', '4h ($120)'] },
+  { id: 'horseback',       name: 'Horseback Riding',     tagline: 'Coastal trail rides',            interests: ['adventure','wildlife'],  tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🐴',  image: 'assets/horseback.jpg', gradient: 'linear-gradient(135deg,#BF360C,#E64A19)',  desc: 'Ride through scenic coastal trails, tropical forests, and stunning ocean overlooks with expert guides.', timeOptions: ['AM', 'PM'], durationOptions: ['2h', '3h'] },
+  { id: 'monkeys',         name: 'Monkey Tour',          tagline: 'Meet the jungle locals',         interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 55,  duration: '2–3 hours',          emoji: '🐒',  image: 'assets/monkeys.jpg', gradient: 'linear-gradient(135deg,#33691E,#558B2F)',  desc: 'Get up close with howler and white-faced monkeys in their natural tropical habitat. A must for nature lovers.', transportNote: 'Transportation to the Mangrove is an extra cost depending on where you are staying — <strong>$190 for 1–6 pax</strong>.' },
+  { id: 'crocodile',       name: 'Crocodile Tour',       tagline: 'River wildlife adventure',       interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🐊',  image: 'assets/crocodile.jpg', gradient: 'linear-gradient(135deg,#827717,#B39000)',  desc: 'Cruise the Tarcoles River and spot massive American crocodiles in the wild up close.', kidsNote: 'Kids ages 5–12: <strong>$45</strong>. Kids under 4: <strong>free</strong>.', timeOptions: ['AM', 'PM'] },
+  { id: 'snorkeling',      name: 'Snorkeling',           tagline: 'Discover marine life',           interests: ['ocean'],                tiers: ['65-100','100-150','150-250','250+'], priceFrom: 90,  duration: '2–3 hours',          emoji: '🤿',  image: 'assets/snorkeling.jpg', gradient: 'linear-gradient(135deg,#00838F,#00ACC1)',  desc: 'Discover vibrant marine life in the crystal-clear Pacific waters near the coastline.', durationOptions: ['2h', '3h'] },
+  { id: 'zipline',         name: 'Zipline',              tagline: 'Fly through the canopy',         interests: ['adventure'],            tiers: ['65-100','100-150','150-250','250+'], priceFrom: 70, duration: '3 hours',            emoji: '🪂',  image: 'assets/zipline.jpg', gradient: 'linear-gradient(135deg,#2E7D32,#43A047)',  desc: 'Soar through the jungle canopy on thrilling ziplines with breathtaking panoramic views of the valley.', timeOptions: ['AM', 'PM'] },
+  { id: 'rafting',         name: 'White Water Rafting',  tagline: 'River rapids adventure',         interests: ['adventure'],            tiers: ['100-150','150-250','250+'],          priceFrom: 120, duration: 'Full day',            emoji: '🚣',  image: 'assets/rafting.jpg', gradient: 'linear-gradient(135deg,#0277BD,#01579B)',  desc: 'Experience the thrill of navigating high-energy river rapids through lush tropical canyons with expert guides.', priceUnit: '/ person (pickup included)' },
+  { id: 'jetski',          name: 'Jet Ski',              tagline: 'Race across the waves',          interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 120, duration: '1–4 hours',          emoji: '🌊',  image: 'assets/jetski.jpg',  gradient: 'linear-gradient(135deg,#006064,#00838F)',  desc: 'Race across the Pacific waves on a thrilling jet ski adventure along the stunning coastline.', durationOptions: ['1h ($120)', '2h ($200)', '3h ($280)', '4h ($350)'] },
+  { id: 'tortuga',         name: 'Tortuga Island',       tagline: 'Paradise island escape',         interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 160, duration: 'Full day',            emoji: '🏝️', image: 'assets/tortuga.jpg', gradient: 'linear-gradient(135deg,#00695C,#00897B)',  desc: 'All-inclusive full-day tour to Tortuga Island departing from Los Sueños Marina. Includes light breakfast, gourmet and DELICIOUS beachfront lunch, unlimited drinks with VIP beach service (host will go to every chair and serve you), private beach chair and umbrella plus 3 activities included (snorkeling, banana boat and hike — <em>hike is optional</em>).' },
   { id: 'paragliding',     name: 'Paragliding',          tagline: 'Soar above the coast',           interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 165, duration: '2 hours',            emoji: '🪁',  image: 'assets/paragliding.jpg', gradient: 'linear-gradient(135deg,#1565C0,#1976D2)',  desc: 'Fly high above the coast and jungle with a professional paragliding guide. Unforgettable views await.', timeOptions: ['AM', 'PM'] },
-  { id: 'fishing',         name: 'Sport Fishing',        tagline: 'Offshore fishing',               interests: ['ocean'],                tiers: ['250+'],                             priceFrom: 200, duration: 'Full day',            emoji: '🎣',  image: 'assets/fishing.jpg', gradient: 'linear-gradient(135deg,#01579B,#0277BD)',  desc: 'World-class offshore fishing for marlin, sailfish, and dorado with expert local guides.' },
-  { id: 'sailing',         name: 'Private Sailing',      tagline: 'Luxury sunset charter',          interests: ['ocean','relaxation'],   tiers: ['250+'],                             priceFrom: 250, duration: 'Half or full day',   emoji: '🌅',  image: 'assets/sailing.jpg', gradient: 'linear-gradient(135deg,#4A148C,#6A1B9A)',  desc: 'Private sailing charter along the stunning Pacific coastline. Perfect for sunset or a full-day escape.' },
+  { id: 'fishing',         name: 'Sport Fishing',        tagline: 'Offshore fishing',               interests: ['ocean'],                tiers: ['250+'],                             priceFrom: 850, duration: 'Full day',            emoji: '🎣',  image: 'assets/fishing.jpg', gradient: 'linear-gradient(135deg,#01579B,#0277BD)',  desc: 'World-class offshore fishing for marlin, sailfish, and dorado with expert local guides.' },
   { id: 'surf',            name: 'Surf Lessons',         tagline: 'Catch your first wave',          interests: ['ocean','adventure'],    tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '🏄‍♂️', image: 'assets/surf.jpg', gradient: 'linear-gradient(135deg,#0097A7,#00BCD4)',  desc: 'Learn to surf with professional local instructors at some of the world’s best beginner breaks.', timeOptions: ['AM', 'PM'] },
-  { id: 'coffee',          name: 'Coffee & Tasting',     tagline: 'Authentic local flavors',        interests: ['food'],                 tiers: ['100-150','150-250','250+'],          priceFrom: 65,  duration: '2 hours',            emoji: '☕',  image: 'assets/coffee.jpg', gradient: 'linear-gradient(135deg,#795548,#8D6E63)',  desc: 'Discover the rich history of Costa Rican coffee followed by a traditional Guaro spirit tasting session.' },
-  { id: 'volcano',         name: 'Volcano Tour',         tagline: 'Majestic peaks & hot springs',   interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 180, duration: 'Full day',            emoji: '🌋',  image: 'assets/volcano.jpg', gradient: 'linear-gradient(135deg,#BF360C,#3E2723)',  desc: 'Journey to the base of a majestic volcano, explore ancient lava flows, and relax in natural thermal hot springs.' },
-  { id: 'chocolate',       name: 'Chocolate Tasting',    tagline: 'The art of cocoa',               interests: ['food'],                 tiers: ['65-100','100-150','150-250','250+'], priceFrom: 55,  duration: '2 hours',            emoji: '🍫',  image: 'assets/chocolate.jpg', gradient: 'linear-gradient(135deg,#3E2723,#5D4037)',  desc: 'Discover the secrets of artisanal chocolate making, from bean to bar, with delicious tastings of premium organic cocoa.', timeOptions: ['AM', 'PM'] },
-  { id: 'partyboat',       name: 'Sunset Party Boat',    tagline: 'Music, drinks & ocean vibes',    interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 95,  duration: '4 hours',            emoji: '🍹',  image: 'assets/party_boat.jpg', gradient: 'linear-gradient(135deg,#FF6F00,#E65100)',  desc: 'Dance the afternoon away on a luxury catamaran with live music, open bar, and the best sunset views on the coast.' },
+  { id: 'coffee',          name: 'Coffee & Guaro Tasting',     tagline: 'Authentic local flavors',        interests: ['food'],                 tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '☕',  image: 'assets/coffee.jpg', gradient: 'linear-gradient(135deg,#795548,#8D6E63)',  desc: 'We bring the flavors to you with a guided tasting of Costa Rican coffee and Guaro. Enjoy traditional coffee brewing and cupping, premium Guaro tastings, and handcrafted local snacks—all while supporting local farmers, artists, and families.' },
+  { id: 'volcano',         name: 'Volcano Tour',         tagline: 'Majestic peaks & hot springs',   interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 180, duration: 'Full day',            emoji: '🌋',  image: 'assets/volcano.jpg', gradient: 'linear-gradient(135deg,#BF360C,#3E2723)',  desc: 'This full-day tour includes a day pass to the hot springs, transportation, and lunch.', infoNote: 'For night stays, ask the Lokani team for price and information.<br><a href="https://wa.me/1234567890" target="_blank" style="color:var(--teal); font-weight:600; text-decoration:none; margin-right: 12px; display:inline-block; margin-top:6px;">📱 WhatsApp</a><a href="mailto:info@lokanitours.com" style="color:var(--teal); font-weight:600; text-decoration:none; display:inline-block; margin-top:6px;">✉️ Email</a>' },
+  { id: 'chocolate',       name: 'Chocolate Tasting',    tagline: 'The art of cocoa',               interests: ['food'],                 tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🍫',  image: 'assets/chocolate.jpg', gradient: 'linear-gradient(135deg,#3E2723,#5D4037)',  desc: 'Experience the rich flavors of Costa Rican cacao through an authentic and flavorful chocolate tasting.', timeOptions: ['AM', 'PM'] },
+  { id: 'partyboat',       name: 'Party Boat',    tagline: 'Music, drinks & ocean vibes',    interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 1550,  duration: '4 hours',            emoji: '🍹',  image: 'assets/party_boat.jpg', gradient: 'linear-gradient(135deg,#FF6F00,#E65100)',  desc: 'Dance the afternoon away on a luxury catamaran with live music, open bar, and the best sunset views on the coast.', priceUnit: 'for whole boat', timeOptions: ['8 AM to 12 PM', '12 PM to 4 PM'] },
 ];
 
 
 const EXTRA_SERVICES = [
-  { id: 'massage',      name: 'Massage',        icon: 'assets/icons/LOKANI ICONS-11.png', desc: 'Professional in-villa massage service. Relax and recharge.',          priceFrom: 80,  options: ['60 min', '90 min'] },
-  { id: 'iv-therapy',   name: 'IV Therapy',     icon: 'assets/icons/LOKANI ICONS-18.png', desc: 'Rejuvenating IV vitamin therapy session at your villa.',              priceFrom: 150, options: null },
-  { id: 'private-chef', name: 'Private Chef',   icon: 'assets/icons/LOKANI ICONS-12.png', desc: 'In-villa private chef with fresh local ingredients. Choose a meal.',  priceFrom: 120, options: ['Breakfast', 'Lunch', 'Dinner'] },
-  { id: 'bartender',    name: 'Bartender',      icon: 'assets/icons/LOKANI ICONS-21.png', desc: 'Professional mixologist to prepare fresh tropical cocktails at your villa.', priceFrom: 60,  options: ['4 hours', 'Full evening'] },
+  { id: 'massage',      name: 'Massage',        icon: 'assets/icons/LOKANI ICONS-11.png', desc: 'Professional in-villa massage service. Relax and recharge.',          priceFrom: 65,  options: ['55 min', '90 min'] },
+  { id: 'iv-therapy',   name: 'IV Therapy',     icon: 'assets/icons/LOKANI ICONS-18.png', desc: 'Recharge and recover with our hydration-focused in-villa IV therapy, packed with fluids, Complex B vitamins, and Vitamin C, this treatment helps restore hydration, boost energy, and get you feeling refreshed faster so you can get the best of your stay.',              priceFrom: 150, options: null },
+  { id: 'private-chef', name: 'Private Chef',   icon: 'assets/icons/LOKANI ICONS-12.png', desc: 'In-villa private chef with fresh local ingredients. Choose a meal.',  priceFrom: 105, options: ['Breakfast · 1–8 pax ($105)', 'Breakfast · 10–14 pax ($130)', 'Lunch · 1–8 pax ($120)', 'Lunch · 10–14 pax ($140)', 'Dinner · 1–8 pax ($140)', 'Dinner · 10–14 pax ($170)'] },
+  { id: 'bartender',    name: 'Bartender',      icon: 'assets/icons/LOKANI ICONS-21.png', desc: 'Professional mixologist to prepare fresh tropical cocktails at your villa.', priceFrom: 80,  options: ['4 hours', 'Full evening'], note: 'Client provides the liquor.' },
+  { id: 'night-concierge', name: 'Night Concierge', icon: 'assets/icons/night_concierge.svg', desc: 'Enjoy Costa Rica nightlife stress-free — we handle restaurant reservations, club and bar access, VIP tables, grocery runs, taxi coordination and more, so your group enjoys an authentic local experience. From the first stop of the night to making sure everyone returns safely to the villa, we\'ve got your night covered.', priceFrom: 200, options: null, nightOnly: true },
 ];
 
 const CELEBRATION_OPTIONS = [
@@ -94,12 +92,16 @@ const state = {
     isMultipleArrivals: false,
     arrivals: [emptyArrival()],
     needsReturn: null,
-    returnDate: '', returnTime: '', returnDepartureDate: '', returnDepartureTime: '', returnLocation: '',
+    departures: [],
   },
 };
 
 function emptyArrival() {
   return { flightNumber: '', houseName: '', arrivalDate: '', arrivalTime: '', guestCount: '', guestNames: '', pickupSign: '', notes: '' };
+}
+
+function emptyDeparture() {
+  return { departureDate: '', departureTime: '', returnDate: '', returnTime: '', location: '', notes: '' };
 }
 
 /* ─── Router ─────────────────────────────────────────────────────────────── */
@@ -353,7 +355,19 @@ function renderStep3() {
     <h2>What's your budget per person for activities?</h2>
     <p>This helps us filter and show you tours that match your expectations. You can always mix and match.</p>
     <div class="field-error mb-16" id="err-budget" style="display:none;">Please select a budget range</div>
-    <div class="card-grid cols-2">${cards}</div>`;
+    <div class="card-grid cols-2">${cards}</div>
+    <div style="text-align:center; margin-top:32px;">
+      <button class="btn-skip-filters" onclick="skipFilters()" style="background:none;border:none;color:var(--teal);font-size:0.92rem;font-weight:600;text-decoration:underline;cursor:pointer;padding:8px 16px;">
+        Skip step and see all available tours and services →
+      </button>
+    </div>`;
+}
+
+function skipFilters() {
+  state.data.budget = '';
+  state.data.interests = [];
+  state.step = 5;
+  renderStep();
 }
 
 /* ─── Step 4: Interests ──────────────────────────────────────────────────── */
@@ -371,7 +385,7 @@ function renderStep4() {
   return `
     <span class="step-tag">Step 4 — Interests</span>
     <h2>What kind of experiences are you looking for?</h2>
-    <p class="multi-hint">Select all that apply — we'll build your recommendations around these.</p>
+    <p class="multi-hint">Select all that apply—we'll craft your Costa Rica experience around your preferences.</p>
     <div class="field-error mb-16" id="err-interests" style="display:none;">Please select at least one interest</div>
     <div class="card-grid">${cards}</div>`;
 }
@@ -398,88 +412,76 @@ function renderStep5() {
       </div>`;
   }
 
-  // 2. Group by Interest (Priority to Selected Interests)
-  const grouped = {};
-  const activeInterests = d.interests.length > 0 ? d.interests : INTERESTS.map(i => i.id);
-
-  activeInterests.forEach(intId => {
-    const toursInCategory = filtered.filter(t => t.interests.includes(intId));
-    if (toursInCategory.length > 0) {
-      grouped[intId] = toursInCategory;
-    }
-  });
-
-  // 3. Generate HTML Sections
-  const sections = Object.keys(grouped).map(intId => {
-    const interest = INTERESTS.find(i => i.id === intId);
-    const categoryTitle = interest ? interest.label : 'Recommendations';
-    
-    const cards = grouped[intId].map(t => {
-      const sel = d.selectedTours.find(s => s.id === t.id);
-      const isSelected = !!sel;
-      const displayInterest = interest ? interest.label : t.interests[0];
-      
-      return `
-        <div class="tour-card ${isSelected ? 'tour-selected' : ''}" id="tour-${t.id}">
-          <div class="tour-image" style="background-image: url('${t.image}'); background-size: cover; background-position: center;">
-            <div class="tour-image-label">${displayInterest}</div>
-          </div>
-          <div class="tour-body">
-            <div class="tour-name">${t.name}</div>
-            <div class="tour-desc">${t.desc}</div>
-            <div class="tour-meta">
-              <div class="tour-duration">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#8A8480" stroke-width="1.2"/><path d="M6 3.5V6l2 1.5" stroke="#8A8480" stroke-width="1.2" stroke-linecap="round"/></svg>
-                ${t.duration}
-              </div>
-              <div class="tour-price">Price starting at <span>$${t.priceFrom} / person</span></div>
-            </div>
-            <button class="btn-select-tour" onclick="toggleTour('${t.id}')">
-              ${isSelected ? '✓ Selected — click to remove' : 'Select this tour'}
-            </button>
-          </div>
-          
-            <div class="tour-booking-form">
-              <div class="booking-grid">
-                <div class="form-group">
-                  <label>Preferred date</label>
-                  <input class="form-control" type="date" id="tour-date-${t.id}" value="${esc(sel?.date || '')}" min="${todayStr()}" onchange="updateTourData('${t.id}','date',this.value)">
-                </div>
-                <div class="form-group">
-                  <label>Guests</label>
-                  <input class="form-control" type="number" id="tour-guests-${t.id}" min="1" value="${sel?.guests || (state.data.adults + state.data.kids)}" onchange="updateTourData('${t.id}','guests',this.value)">
-                </div>
-              </div>
-              ${t.durationOptions ? `
-                <div class="form-group" style="margin-top:12px;">
-                  <label>Preferred duration</label>
-                  <div class="option-chips" style="margin-top:4px;">
-                    ${t.durationOptions.map(o => 
-                      `<span class="option-chip ${sel?.durationOption === o ? 'active' : ''}" onclick="setTourDuration('${t.id}','${o}',this)">${o}</span>`
-                    ).join('')}
-                  </div>
-                </div>` : ''}
-              ${t.timeOptions ? `
-                <div class="form-group" style="margin-top:12px;">
-                  <label>Preferred time</label>
-                  <div class="option-chips" style="margin-top:4px;">
-                    ${t.timeOptions.map(o => 
-                      `<span class="option-chip ${sel?.time === o ? 'active' : ''}" onclick="setTourTime('${t.id}','${o}',this)">${o}</span>`
-                    ).join('')}
-                  </div>
-                </div>` : ''}
-            </div>
-          </div>`;
-    }).join('');
+  // 2. Render a single deduped list of tour cards
+  const cards = filtered.map(t => {
+    const sel = d.selectedTours.find(s => s.id === t.id);
+    const isSelected = !!sel;
+    const primaryInterest = INTERESTS.find(i => t.interests.includes(i.id));
+    const displayInterest = primaryInterest ? primaryInterest.label : t.interests[0];
 
     return `
-      <div class="category-section">
-        <h3 class="category-header" style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
-          <img src="${interest.icon}" alt="" style="width:48px;height:48px;object-fit:contain;">
-          ${categoryTitle} Tours
-        </h3>
-        <div class="tours-grid">${cards}</div>
-      </div>`;
+      <div class="tour-card ${isSelected ? 'tour-selected' : ''}" id="tour-${t.id}">
+        <div class="tour-image" style="background-image: url('${t.image}'); background-size: cover; background-position: center;">
+          <div class="tour-image-label">${displayInterest}</div>
+        </div>
+        <div class="tour-body">
+          <div class="tour-name">${t.name}</div>
+          <div class="tour-desc">${t.desc}</div>
+          <div class="tour-meta">
+            <div class="tour-duration">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#8A8480" stroke-width="1.2"/><path d="M6 3.5V6l2 1.5" stroke="#8A8480" stroke-width="1.2" stroke-linecap="round"/></svg>
+              ${t.duration}
+            </div>
+            <div class="tour-price">Price starting at <span>$${t.priceFrom} ${t.priceUnit || '/ person'}</span></div>
+          </div>
+          ${t.kidsNote ? `<div class="tour-kids-pricing-row"><div class="tour-price">Kids pricing <span>$45 (5–12) / kid</span></div></div>
+          <div class="tour-kids-free-note"><strong>Note:</strong> Kids under 4 is free.</div>` : ''}
+          ${t.transportNote ? `<div class="tour-transport-note" style="font-size:0.82rem;color:#6B6560;background:rgba(26,92,74,0.05);border-left:3px solid var(--teal);padding:8px 10px;border-radius:4px;margin:8px 0 0;line-height:1.45;"><strong style="color:var(--teal);text-transform:uppercase;letter-spacing:0.5px;font-size:0.72rem;display:block;margin-bottom:2px;">Getting there</strong>${t.transportNote}</div>` : ''}
+          ${t.infoNote ? `<div class="tour-info-note" style="font-size:0.82rem;color:#6B6560;background:rgba(26,92,74,0.05);border-left:3px solid var(--teal);padding:8px 10px;border-radius:4px;margin:8px 0 0;line-height:1.45;"><strong style="color:var(--teal);text-transform:uppercase;letter-spacing:0.5px;font-size:0.72rem;display:block;margin-bottom:2px;">Good to know</strong>${t.infoNote}</div>` : ''}
+          <button class="btn-select-tour" onclick="toggleTour('${t.id}')" style="margin-top:12px;">
+            ${isSelected ? '✓ Selected — click to remove' : 'Select this tour'}
+          </button>
+        </div>
+
+          <div class="tour-booking-form">
+            <div class="booking-grid">
+              <div class="form-group">
+                <label>Preferred date</label>
+                <input class="form-control" type="date" id="tour-date-${t.id}" value="${esc(sel?.date || '')}" min="${esc(d.arrivalDate) || todayStr()}" ${d.departureDate ? `max="${esc(d.departureDate)}"` : ''} onchange="updateTourData('${t.id}','date',this.value)">
+              </div>
+              <div class="form-group">
+                <label>Guests</label>
+                <input class="form-control" type="number" id="tour-guests-${t.id}" min="1" max="${state.data.adults + state.data.kids}" value="${sel?.guests || (state.data.adults + state.data.kids)}" oninput="validateTourGuestsInline('${t.id}', this, ${state.data.adults + state.data.kids})" onchange="updateTourData('${t.id}','guests',this.value)">
+                <div class="field-error" id="err-tour-guests-inline-${t.id}" style="display:none; font-size:0.75rem; margin-top:4px; text-align:left; line-height:1.4;">Guest count cannot exceed your total party size (${state.data.adults + state.data.kids}).</div>
+              </div>
+            </div>
+            ${t.id === 'volcano' ? `
+              <div class="form-group" style="margin-top:12px;">
+                <label style="display:flex; align-items:center; gap:8px; text-transform:none; letter-spacing:normal; cursor:pointer;">
+                  <input type="checkbox" style="width:18px; height:18px; accent-color:var(--teal);" id="tour-nightstay-${t.id}" ${sel?.nightStay ? 'checked' : ''} onchange="updateTourData('${t.id}','nightStay',this.checked)">
+                  <span>I'm interested in a night stay — please contact me with pricing</span>
+                </label>
+              </div>` : ''}
+            ${t.durationOptions ? `
+              <div class="form-group" style="margin-top:12px;" id="tour-duration-group-${t.id}">
+                <label>Preferred duration</label>
+                <div class="option-chips" style="margin-top:4px;">
+                  ${t.durationOptions.map(o =>
+                    `<span class="option-chip ${sel?.durationOption === o ? 'active' : ''}" onclick="setTourDuration('${t.id}','${o}',this); this.parentElement.querySelectorAll('.option-chip').forEach(c=>c.style.borderColor='');">${o}</span>`
+                  ).join('')}
+                </div>
+              </div>` : ''}
+            ${t.timeOptions ? `
+              <div class="form-group" style="margin-top:12px;" id="tour-time-group-${t.id}">
+                <label>Preferred time</label>
+                <div class="option-chips" style="margin-top:4px;">
+                  ${t.timeOptions.map(o =>
+                    `<span class="option-chip ${sel?.time === o ? 'active' : ''}" onclick="setTourTime('${t.id}','${o}',this); this.parentElement.querySelectorAll('.option-chip').forEach(c=>c.style.borderColor='');">${o}</span>`
+                  ).join('')}
+                </div>
+              </div>` : ''}
+          </div>
+        </div>`;
   }).join('');
 
   return `
@@ -487,7 +489,7 @@ function renderStep5() {
     <h2>Tours we recommend for you</h2>
     <p class="multi-hint">Select the ones you're interested in — you can pick more than one.</p>
     <div class="field-error mb-24" id="err-tours" style="display:none; text-align:center;">Please select at least one tour to continue</div>
-    <div class="categorized-tours">${sections}</div>`;
+    <div class="tours-grid">${cards}</div>`;
 }
 
 /* ─── Step 6: Extra Services ─────────────────────────────────────────────── */
@@ -496,10 +498,25 @@ function renderStep6() {
   const cards = EXTRA_SERVICES.map(s => {
     const sel = d.selectedServices.find(x => x.id === s.id);
     const isSelected = !!sel;
-    const optionChips = s.options
-      ? `<div class="option-chips">${s.options.map(o =>
-          `<span class="option-chip ${sel?.option === o ? 'active' : ''}" onclick="setServiceOption('${s.id}','${o}')">${o}</span>`
-        ).join('')}</div>`
+    let dropdownLabel = 'Select options...';
+    if (sel?.options && sel.options.length > 0) {
+      dropdownLabel = sel.options.length === 1 ? sel.options[0] : `${sel.options.length} options selected`;
+    }
+
+    const optionDropdown = s.options
+      ? `<div class="custom-dropdown">
+          <div class="custom-dropdown-header" onclick="this.classList.toggle('open')">
+            ${dropdownLabel}
+          </div>
+          <div class="custom-dropdown-list">
+            ${s.options.map(o => `
+              <label class="custom-dropdown-item">
+                <input type="checkbox" value="${o}" ${sel?.options && sel.options.includes(o) ? 'checked' : ''} onchange="setServiceOptionsCustom('${s.id}', '${o}', this.checked, event)">
+                <span>${o}</span>
+              </label>
+            `).join('')}
+          </div>
+         </div>`
       : '';
 
     return `
@@ -509,13 +526,14 @@ function renderStep6() {
         </div>
         <div class="service-name">${s.name}</div>
         <div class="service-desc">${s.desc}</div>
+        ${s.note ? `<div class="service-note" style="font-size:0.82rem;color:#6B6560;background:rgba(26,92,74,0.05);border-left:3px solid var(--teal);padding:8px 10px;border-radius:4px;margin:4px 0 12px;line-height:1.45;"><strong style="color:var(--teal);text-transform:uppercase;letter-spacing:0.5px;font-size:0.72rem;display:block;margin-bottom:2px;">Please note</strong>${s.note}</div>` : ''}
         <div class="service-price">From $${s.priceFrom}</div>
         <div class="service-details-form" onclick="event.stopPropagation()">
-          ${s.options ? `<label>Choose option</label>${optionChips}` : ''}
-          <label>Preferred date <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.78rem">(optional)</span></label>
-          <input class="form-control" type="date" value="${esc(sel?.date || '')}" min="${todayStr()}" onchange="updateServiceData('${s.id}','date',this.value)">
-          <label>Preferred time <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.78rem">(optional)</span></label>
-          <input class="form-control" type="time" value="${esc(sel?.time || '')}" onchange="updateServiceData('${s.id}','time',this.value)">
+          ${s.options ? `<label>Choose options</label>${optionDropdown}` : ''}
+          <label>Preferred date</label>
+          <input class="form-control" type="date" id="srv-date-${s.id}" value="${esc(sel?.date || '')}" min="${esc(d.arrivalDate) || todayStr()}" ${d.departureDate ? `max="${esc(d.departureDate)}"` : ''} onchange="updateServiceData('${s.id}','date',this.value); this.style.borderColor='';">
+          <label>Preferred time</label>
+          <select class="form-control" id="srv-time-${s.id}" onchange="updateServiceData('${s.id}','time',this.value); this.style.borderColor='';">${time15Options(sel?.time || '', s.nightOnly)}</select>
           <label>Notes <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.78rem">(optional)</span></label>
           <input class="form-control" type="text" placeholder="Any special requests…" value="${esc(sel?.notes || '')}" onchange="updateServiceData('${s.id}','notes',this.value)">
         </div>
@@ -526,6 +544,7 @@ function renderStep6() {
     <span class="step-tag">Step 6 — Enhance your stay</span>
     <h2>Would you like to add any extra services?</h2>
     <p>All optional — add what sounds good and we'll include it in your reservation.</p>
+    <div class="field-error mb-24" id="err-services" style="display:none; text-align:center;"></div>
     <div class="services-grid">
       ${cards}
       <div class="service-card ${d.selectedServices.length === 0 ? 'service-selected' : ''}" id="srv-none" onclick="clearServices()">
@@ -583,6 +602,7 @@ function renderStep8() {
 
   const arrivalsHtml = t.arrivals.map((a, i) => renderArrivalBlock(a, i, true)).join('');
   const returnVisible = t.needsReturn === true;
+  const departuresHtml = t.departures.map((dep, i) => renderDepartureBlock(dep, i, true, d.property)).join('');
 
   return `
     <span class="step-tag">Step 8 — Transportation Details</span>
@@ -590,23 +610,17 @@ function renderStep8() {
     <p class="multi-hint">We'll arrange your pickup and drop-off based on this information.</p>
 
     <div class="form-group mb-24">
-      <label>Number of arrival groups</label>
-      <div class="arrival-mode-toggle">
-        <button class="arrival-mode-btn ${!t.isMultipleArrivals ? 'active' : ''}" onclick="toggleArrivalMode(false)">Only 1 Arrival</button>
-        <button class="arrival-mode-btn ${t.isMultipleArrivals ? 'active' : ''}" onclick="toggleArrivalMode(true)">Multiple Arrivals</button>
-      </div>
+      <label>Arrival details</label>
     </div>
 
     <div id="arrivals-container">
       ${arrivalsHtml}
     </div>
 
-    ${t.isMultipleArrivals ? `
-      <button class="btn-ghost mb-24" onclick="addArrival(true)">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        Add another set of details
-      </button>
-    ` : ''}
+    <button class="btn-add-arrival mb-24" onclick="addArrival(true)">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Add Arrival
+    </button>
 
     <hr class="section-divider mt-24 mb-24">
 
@@ -619,34 +633,14 @@ function renderStep8() {
     </div>
 
     <div class="return-fields ${returnVisible ? 'visible' : ''}" id="return-fields" style="${returnVisible ? '' : 'display:none;'}">
-      <div class="section-title">Return details</div>
-      <div class="form-grid">
-        <div class="form-group">
-          <label>Departure date</label>
-          <input class="form-control" type="date" id="r-dep-date" value="${esc(t.returnDepartureDate)}" min="${todayStr()}">
-          <div class="field-error" id="err-r-dep-date">Please select departure date</div>
-        </div>
-        <div class="form-group">
-          <label>Departure time</label>
-          <input class="form-control" type="time" id="r-dep-time" value="${esc(t.returnDepartureTime)}">
-          <div class="field-error" id="err-r-dep-time">Please select departure time</div>
-        </div>
+      <div class="section-title">Departure details</div>
+      <div id="departures-container">
+        ${departuresHtml}
       </div>
-      <div class="form-grid">
-        <div class="form-group">
-          <label>Return date <span>(if different)</span></label>
-          <input class="form-control" type="date" id="r-ret-date" value="${esc(t.returnDate)}" min="${todayStr()}">
-        </div>
-        <div class="form-group">
-          <label>Return time <span>(optional)</span></label>
-          <input class="form-control" type="time" id="r-ret-time" value="${esc(t.returnTime)}">
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Pickup location for return</label>
-        <input class="form-control" type="text" id="r-location" placeholder="Villa or address for pickup" value="${esc(t.returnLocation || d.property)}">
-        <div class="field-error" id="err-r-location">Please enter pickup location</div>
-      </div>
+      <button class="btn-add-arrival mb-24" onclick="addDeparture(true)">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Add Departure
+      </button>
     </div>`;
 }
 
@@ -683,6 +677,10 @@ function renderStep9() {
               ${s.time ? `· <span style="font-weight:600;color:var(--teal);">${s.time}</span>` : ''} 
               · ${s.guests} guest${s.guests !== 1 ? 's' : ''}
             </div>
+            <div class="review-list-sub" style="margin-top:4px;">
+              ${getTourPriceBreakdown(s)}
+            </div>
+            ${s.nightStay ? `<div style="margin-top:6px; font-size:0.8rem; color:var(--teal); font-weight:600;">🌙 Night stay requested — team will contact you</div>` : ''}
           </div>`;
       }).join('')
     : '<div class="review-list-item review-empty">No tours selected</div>';
@@ -694,7 +692,7 @@ function renderStep9() {
         const guestCount = s.guests || (d.adults + d.kids);
         return `
           <div class="review-list-item">
-            <div class="review-list-main">${srv.name}${s.option ? ` (${s.option})` : ''}</div>
+            <div class="review-list-main">${srv.name}${s.options && s.options.length > 0 ? ` (${s.options.join(', ')})` : ''}</div>
             <div class="review-list-sub">
               ${s.date ? `Date: ${formatShortDate(s.date)}` : 'Date TBD'} ${s.time ? `· @ ${s.time}` : ''} · ${guestCount} guest${guestCount !== 1 ? 's' : ''}
             </div>
@@ -736,22 +734,24 @@ function renderStep9() {
     `).join('');
 
     if (t.needsReturn) {
-      transportHtml += `
-        <div class="transport-review-group" style="background:rgba(26,92,74,0.03); border:1px solid rgba(26,92,74,0.1); padding:16px; border-radius:12px;">
+      transportHtml += t.departures.map((dep, i) => `
+        <div class="transport-review-group" style="background:rgba(26,92,74,0.03); border:1px solid rgba(26,92,74,0.1); padding:16px; border-radius:12px; margin-bottom:12px;">
           <div class="review-list-main" style="color:var(--teal); display:flex; align-items:center; gap:8px; margin-bottom:12px;">
-            <span style="font-size:1.2rem;">🏠</span> Return Trip Details
+            <span style="background:var(--teal); color:#fff; width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:10px;">${i+1}</span>
+            Departure ${i+1} details
           </div>
           <div class="review-data-grid">
             <div class="review-data-item">
               <span class="review-data-label">Departure</span>
-              <span class="review-data-value">${formatShortDate(t.returnDepartureDate) || 'TBD'} @ ${t.returnDepartureTime || 'TBD'}</span>
+              <span class="review-data-value">${formatShortDate(dep.departureDate) || 'TBD'} @ ${dep.departureTime || 'TBD'}</span>
             </div>
             <div class="review-data-item">
               <span class="review-data-label">Pickup Location</span>
-              <span class="review-data-value">${t.returnLocation || propertyLabel}</span>
+              <span class="review-data-value">${dep.location || propertyLabel}</span>
             </div>
           </div>
-        </div>`;
+          ${dep.notes ? `<div class="review-list-sub" style="margin-top:12px; border-top:1px dashed #eee; padding-top:8px;"><strong>Special Instructions:</strong> ${dep.notes}</div>` : ''}
+        </div>`).join('');
     }
   }
 
@@ -793,7 +793,7 @@ function renderStep9() {
 
       <div class="review-card">
         <div class="review-card-header">
-           <div class="review-card-title">💆 Enhance Your Stay</div>
+           <div class="review-card-title">💆 Services Requested</div>
            <div class="review-edit-btn" onclick="goToStep(6)">Edit</div>
         </div>
         ${servicesHtml}
@@ -856,6 +856,56 @@ function formatShortDate(ds) {
   if (!ds) return 'TBD';
   const d = new Date(ds + 'T12:00:00');
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function getTourPriceBreakdown(sel) {
+  const t = TOURS.find(x => x.id === sel.id);
+  if (!t || !t.priceFrom) return '';
+  
+  const d = state.data;
+  let adultsCount = 0;
+  let kidsAges = [];
+  
+  let remaining = parseInt(sel.guests, 10) || 0;
+  if (remaining <= 0) return '';
+  
+  if (remaining >= d.adults) {
+    adultsCount = d.adults;
+    remaining -= d.adults;
+  } else {
+    adultsCount = remaining;
+    remaining = 0;
+  }
+  
+  if (remaining > 0) {
+    const ageMap = { '14–17': 15, '11–13': 12, '8–10': 9, '5–7': 6, '2–4': 3, 'Under 2': 1 };
+    let sortedKids = [...d.kidsAges].filter(a => a).sort((a, b) => ageMap[b] - ageMap[a]);
+    kidsAges = sortedKids.slice(0, remaining);
+  }
+  
+  if (t.id === 'crocodile') {
+    let adultTotal = adultsCount * 65;
+    let kids5to12Count = 0;
+    let kidsUnder4Count = 0;
+    
+    kidsAges.forEach(ageStr => {
+      if (['5–7', '8–10', '11–13', '14–17'].includes(ageStr)) kids5to12Count++;
+      else kidsUnder4Count++;
+    });
+    
+    let kidTotal = kids5to12Count * 45;
+    let total = adultTotal + kidTotal;
+    
+    let parts = [];
+    if (adultsCount > 0) parts.push(`${adultsCount} Adult(s) @ $65`);
+    if (kids5to12Count > 0) parts.push(`${kids5to12Count} Kid(s) @ $45`);
+    if (kidsUnder4Count > 0) parts.push(`${kidsUnder4Count} Kid(s) Free`);
+    
+    return `<strong>Est. Tour Total: $${total}</strong> <span style="font-size:0.8rem;color:#888;">(${parts.join(', ')})</span>`;
+  }
+  
+  let total = sel.guests * t.priceFrom;
+  return `<strong>Est. Tour Total: $${total}</strong> <span style="font-size:0.8rem;color:#888;">(${sel.guests} pax @ $${t.priceFrom})</span>`;
 }
 
 function validateStep(step) {
@@ -970,9 +1020,141 @@ function validateStep(step) {
   if (step === 5) {
     if (state.data.selectedTours.length === 0) {
       const el = document.getElementById('err-tours');
-      if (el) el.style.display = 'block';
+      if (el) {
+        el.textContent = 'Please select at least one tour to continue';
+        el.style.display = 'block';
+      }
       shake('.step-nav .btn-next');
       return false;
+    }
+
+    let ok = true;
+    let exceedsGuests = false;
+    for (const sel of state.data.selectedTours) {
+      const t = TOURS.find(x => x.id === sel.id);
+      let missing = false;
+      const maxGuests = state.data.adults + state.data.kids;
+
+      // Date
+      const dateInput = document.getElementById(`tour-date-${t.id}`);
+      if (!sel.date) {
+        missing = true;
+        if (dateInput) dateInput.style.borderColor = 'red';
+      } else {
+        if (dateInput) dateInput.style.borderColor = '';
+      }
+
+      // Guests
+      const guestsInput = document.getElementById(`tour-guests-${t.id}`);
+      if (!sel.guests || sel.guests < 1) {
+        missing = true;
+        if (guestsInput) guestsInput.style.borderColor = 'red';
+      } else if (sel.guests > maxGuests) {
+        missing = true;
+        exceedsGuests = true;
+        if (guestsInput) guestsInput.style.borderColor = 'red';
+      } else {
+        if (guestsInput) guestsInput.style.borderColor = '';
+      }
+
+      // Duration Options
+      if (t.durationOptions) {
+        const durationGroup = document.getElementById(`tour-duration-group-${t.id}`);
+        const chips = durationGroup ? durationGroup.querySelectorAll('.option-chip') : [];
+        if (!sel.durationOption) {
+          missing = true;
+          chips.forEach(c => c.style.borderColor = 'red');
+        } else {
+          chips.forEach(c => c.style.borderColor = '');
+        }
+      }
+
+      // Time Options
+      if (t.timeOptions) {
+        const timeGroup = document.getElementById(`tour-time-group-${t.id}`);
+        const chips = timeGroup ? timeGroup.querySelectorAll('.option-chip') : [];
+        if (!sel.time) {
+          missing = true;
+          chips.forEach(c => c.style.borderColor = 'red');
+        } else {
+          chips.forEach(c => c.style.borderColor = '');
+        }
+      }
+
+      if (missing) {
+        ok = false;
+        shake(`#tour-${t.id}`);
+      }
+    }
+
+    const errTours = document.getElementById('err-tours');
+    if (!ok) {
+      if (errTours) {
+        if (exceedsGuests) {
+          errTours.textContent = `Guest count for a tour cannot exceed your total party size of ${state.data.adults + state.data.kids}.`;
+        } else {
+          errTours.textContent = 'Please fill out all required options (Date, Duration, Time) for your selected tours.';
+        }
+        errTours.style.display = 'block';
+      }
+      shake('.step-nav .btn-next');
+      return false;
+    } else {
+      if (errTours) errTours.style.display = 'none';
+    }
+  }
+  if (step === 6) {
+    let ok = true;
+    for (const sel of state.data.selectedServices) {
+      const srv = EXTRA_SERVICES.find(x => x.id === sel.id);
+      let missing = false;
+
+      // Options
+      if (srv.options) {
+        const card = document.getElementById(`srv-${srv.id}`);
+        const dropdownHeader = card ? card.querySelector('.custom-dropdown-header') : null;
+        if (!sel.options || sel.options.length === 0) {
+          missing = true;
+          if (dropdownHeader) dropdownHeader.style.borderColor = 'red';
+        } else {
+          if (dropdownHeader) dropdownHeader.style.borderColor = '';
+        }
+      }
+
+      // Date
+      const dateInput = document.getElementById(`srv-date-${srv.id}`);
+      if (!sel.date) {
+        missing = true;
+        if (dateInput) dateInput.style.borderColor = 'red';
+      } else {
+        if (dateInput) dateInput.style.borderColor = '';
+      }
+
+      // Time
+      const timeInput = document.getElementById(`srv-time-${srv.id}`);
+      if (!sel.time || sel.time === '') {
+        missing = true;
+        if (timeInput) timeInput.style.borderColor = 'red';
+      } else {
+        if (timeInput) timeInput.style.borderColor = '';
+      }
+
+      if (missing) {
+        ok = false;
+        shake(`#srv-${srv.id}`);
+      }
+    }
+
+    const errServices = document.getElementById('err-services');
+    if (!ok) {
+      if (errServices) {
+        errServices.textContent = 'Please fill out all required fields (Options, Date, Time) for your selected services.';
+        errServices.style.display = 'block';
+      }
+      shake('.step-nav .btn-next');
+      return false;
+    } else {
+      if (errServices) errServices.style.display = 'none';
     }
   }
   if (step === 7) {
@@ -996,15 +1178,13 @@ function validateStep(step) {
       if (!a.pickupSign) { showError(`err-step-sign-${i}`, true); ok = false; } else { showError(`err-step-sign-${i}`, false); }
     });
 
-    // Validate return if active
+    // Validate each departure block
     if (t.needsReturn === true) {
-      const depDate = document.getElementById('r-dep-date')?.value;
-      const depTime = document.getElementById('r-dep-time')?.value;
-      const retLoc = document.getElementById('r-location')?.value.trim();
-      
-      if (!depDate) { showError('err-r-dep-date', true); ok = false; } else { showError('err-r-dep-date', false); }
-      if (!depTime) { showError('err-r-dep-time', true); ok = false; } else { showError('err-r-dep-time', false); }
-      if (!retLoc) { showError('err-r-location', true); ok = false; } else { showError('err-r-location', false); }
+      t.departures.forEach((dep, i) => {
+        if (!dep.departureDate) { showError(`err-step-dep-date-${i}`, true); ok = false; } else { showError(`err-step-dep-date-${i}`, false); }
+        if (!dep.departureTime) { showError(`err-step-dep-time-${i}`, true); ok = false; } else { showError(`err-step-dep-time-${i}`, false); }
+        if (!dep.location)      { showError(`err-step-dep-location-${i}`, true); ok = false; } else { showError(`err-step-dep-location-${i}`, false); }
+      });
     }
 
     if (!ok) shake('.step-nav .btn-next');
@@ -1181,6 +1361,18 @@ function updateTourData(id, field, value) {
   if (entry) entry[field] = value;
 }
 
+function validateTourGuestsInline(id, inputEl, max) {
+  const val = parseInt(inputEl.value, 10);
+  const errEl = document.getElementById(`err-tour-guests-inline-${id}`);
+  if (val > max) {
+    inputEl.style.borderColor = 'red';
+    if (errEl) errEl.style.display = 'block';
+  } else {
+    inputEl.style.borderColor = '';
+    if (errEl) errEl.style.display = 'none';
+  }
+}
+
 function setTourDuration(id, duration, el) {
   updateTourData(id, 'durationOption', duration);
   const parent = el.parentElement;
@@ -1206,7 +1398,7 @@ function toggleService(id, event) {
 
   const idx = state.data.selectedServices.findIndex(s => s.id === id);
   if (idx === -1) {
-    state.data.selectedServices.push({ id, option: null, date: '', time: '', notes: '' });
+    state.data.selectedServices.push({ id, options: [], date: '', time: '', notes: '' });
   } else {
     state.data.selectedServices.splice(idx, 1);
   }
@@ -1217,7 +1409,7 @@ function toggleService(id, event) {
 function setServiceOption(id, option) {
   let entry = state.data.selectedServices.find(s => s.id === id);
   if (!entry) {
-    entry = { id, option: null, date: '', notes: '' };
+    entry = { id, options: [], date: '', notes: '' };
     state.data.selectedServices.push(entry);
     const card = document.getElementById(`srv-${id}`);
     if (card) card.classList.add('service-selected');
@@ -1230,6 +1422,33 @@ function setServiceOption(id, option) {
     card.querySelectorAll('.option-chip').forEach(chip => {
       chip.classList.toggle('active', chip.textContent.trim() === option);
     });
+  }
+}
+
+function setServiceOptionsCustom(id, option, isChecked, event) {
+  let entry = state.data.selectedServices.find(s => s.id === id);
+  if (!entry) {
+    entry = { id, options: [], date: '', notes: '' };
+    state.data.selectedServices.push(entry);
+    const card = document.getElementById(`srv-${id}`);
+    if (card) card.classList.add('service-selected');
+  }
+  
+  if (isChecked) {
+    if (!entry.options.includes(option)) entry.options.push(option);
+  } else {
+    entry.options = entry.options.filter(o => o !== option);
+  }
+  
+  const card = document.getElementById(`srv-${id}`);
+  if (card) {
+    const header = card.querySelector('.custom-dropdown-header');
+    if (header) {
+      if (entry.options.length === 0) header.innerHTML = 'Select options...';
+      else if (entry.options.length === 1) header.innerHTML = entry.options[0];
+      else header.innerHTML = `${entry.options.length} options selected`;
+      header.style.borderColor = ''; // clear error outline on change
+    }
   }
 }
 
@@ -1279,6 +1498,7 @@ function renderTransportForm() {
   const t = state.transport;
   const arrivalsHtml = t.arrivals.map((a, i) => renderArrivalBlock(a, i)).join('');
   const returnVisible = t.needsReturn === true;
+  const departuresHtml = t.departures.map((dep, i) => renderDepartureBlock(dep, i, false, state.data.property)).join('');
 
   document.getElementById('app').innerHTML = `
     <div class="screen active" id="screen-transport">
@@ -1310,7 +1530,7 @@ function renderTransportForm() {
           <div id="arrivals-container">${arrivalsHtml}</div>
           <button class="btn-add-arrival" onclick="addArrival()">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Add another arrival
+            Add Arrival
           </button>
 
           <hr class="section-divider">
@@ -1324,34 +1544,12 @@ function renderTransportForm() {
           </div>
 
           <div class="return-fields ${returnVisible ? 'visible' : ''}" id="return-fields">
-            <div class="section-title">Return details</div>
-            <div class="form-grid">
-              <div class="form-group">
-                <label>Departure date</label>
-                <input class="form-control" type="date" id="r-dep-date" value="${esc(t.returnDepartureDate)}" min="${todayStr()}">
-                <div class="field-error" id="err-r-dep-date">Please select departure date</div>
-              </div>
-              <div class="form-group">
-                <label>Departure time</label>
-                <input class="form-control" type="time" id="r-dep-time" value="${esc(t.returnDepartureTime)}">
-                <div class="field-error" id="err-r-dep-time">Please select departure time</div>
-              </div>
-            </div>
-            <div class="form-grid">
-              <div class="form-group">
-                <label>Return date <span>(if different)</span></label>
-                <input class="form-control" type="date" id="r-ret-date" value="${esc(t.returnDate)}" min="${todayStr()}">
-              </div>
-              <div class="form-group">
-                <label>Return time <span>(optional)</span></label>
-                <input class="form-control" type="time" id="r-ret-time" value="${esc(t.returnTime)}">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Pickup location for return</label>
-              <input class="form-control" type="text" id="r-location" placeholder="Villa or address for pickup" value="${esc(t.returnLocation)}">
-              <div class="field-error" id="err-r-location">Please enter pickup location</div>
-            </div>
+            <div class="section-title">Departure details</div>
+            <div id="departures-container">${departuresHtml}</div>
+            <button class="btn-add-arrival" onclick="addDeparture()">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Add Departure
+            </button>
           </div>
         </div>
 
@@ -1450,24 +1648,80 @@ function updateArrival(index, field, value) {
   state.transport.arrivals[index][field] = value;
 }
 
+function renderDepartureBlock(departure, index, isStep, defaultLocation) {
+  const canRemove = state.transport.departures.length > 1;
+  const prefix = isStep ? 'step-' : '';
+  return `
+    <div class="arrival-block" id="departure-block-${index}">
+      <div class="arrival-block-header">
+        <span class="arrival-block-title">Departure ${index + 1}</span>
+        ${canRemove ? `<button class="btn-remove-arrival" onclick="removeDeparture(${index}, ${isStep})">Remove</button>` : ''}
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Departure date</label>
+          <input class="form-control" id="${prefix}dep-date-${index}" type="date" value="${esc(departure.departureDate)}" min="${todayStr()}"
+            onchange="updateDeparture(${index},'departureDate',this.value)">
+          <div class="field-error" id="err-${prefix}dep-date-${index}">Please select departure date</div>
+        </div>
+        <div class="form-group">
+          <label>Departure time</label>
+          <input class="form-control" id="${prefix}dep-time-${index}" type="time" value="${esc(departure.departureTime)}"
+            onchange="updateDeparture(${index},'departureTime',this.value)">
+          <div class="field-error" id="err-${prefix}dep-time-${index}">Please select departure time</div>
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Return date <span>(if different)</span></label>
+          <input class="form-control" id="${prefix}ret-date-${index}" type="date" value="${esc(departure.returnDate)}" min="${todayStr()}"
+            onchange="updateDeparture(${index},'returnDate',this.value)">
+        </div>
+        <div class="form-group">
+          <label>Return time <span>(optional)</span></label>
+          <input class="form-control" id="${prefix}ret-time-${index}" type="time" value="${esc(departure.returnTime)}"
+            onchange="updateDeparture(${index},'returnTime',this.value)">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Pickup location</label>
+        <input class="form-control" id="${prefix}dep-location-${index}" type="text" placeholder="Villa or address for pickup" value="${esc(departure.location || defaultLocation || '')}"
+          onchange="updateDeparture(${index},'location',this.value)">
+        <div class="field-error" id="err-${prefix}dep-location-${index}">Please enter pickup location</div>
+      </div>
+      <div class="form-group">
+        <label>Special instructions <span>(optional)</span></label>
+        <textarea class="form-control" rows="2" placeholder="Anything else we should know…"
+          onchange="updateDeparture(${index},'notes',this.value)">${esc(departure.notes)}</textarea>
+      </div>
+    </div>`;
+}
+
+function addDeparture(isStep) {
+  state.transport.departures.push(emptyDeparture());
+  if (isStep) renderStep();
+  else renderTransportForm();
+}
+
+function removeDeparture(index, isStep) {
+  state.transport.departures.splice(index, 1);
+  if (isStep) renderStep();
+  else renderTransportForm();
+}
+
+function updateDeparture(index, field, value) {
+  state.transport.departures[index][field] = value;
+}
+
 function setNeedsReturn(val, isStep) {
   state.transport.needsReturn = val;
-  const returnFields = document.getElementById('return-fields');
-  if (returnFields) {
-    if (val) {
-      returnFields.classList.add('visible');
-      returnFields.style.display = 'block';
-    } else {
-      returnFields.classList.remove('visible');
-      returnFields.style.display = 'none';
-    }
+  if (val && state.transport.departures.length === 0) {
+    state.transport.departures.push(emptyDeparture());
   }
   if (isStep) {
-    // Re-render UI only if we are in the main flow step
     renderStep();
   } else {
-    document.querySelectorAll('.yes-no-btn').forEach(btn => btn.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    renderTransportForm();
   }
 }
 
@@ -1498,24 +1752,13 @@ function submitTransport() {
     if (!a.pickupSign) { showError(`err-sign-${i}`, true); ok = false; } else { showError(`err-sign-${i}`, false); }
   });
 
-  // 3. Collect & Validate Return (if active)
-  if (t.needsReturn === null) {
-     // No active check for the yes/no buttons specifically but we should ensure it's set if necessary
-     // Usually better to default to No if not explicitly Yes.
-  }
-  
+  // 3. Validate Departures (if return needed)
   if (t.needsReturn === true) {
-    t.returnDepartureDate = document.getElementById('r-dep-date')?.value || '';
-    t.returnDepartureTime = document.getElementById('r-dep-time')?.value || '';
-    t.returnLocation      = document.getElementById('r-location')?.value.trim() || '';
-    
-    if (!t.returnDepartureDate) { showError('err-r-dep-date', true); ok = false; } else { showError('err-r-dep-date', false); }
-    if (!t.returnDepartureTime) { showError('err-r-dep-time', true); ok = false; } else { showError('err-r-dep-time', false); }
-    if (!t.returnLocation)      { showError('err-r-location', true); ok = false; } else { showError('err-r-location', false); }
-    
-    // Optional fields
-    t.returnDate = document.getElementById('r-ret-date')?.value || '';
-    t.returnTime = document.getElementById('r-ret-time')?.value || '';
+    t.departures.forEach((dep, i) => {
+      if (!dep.departureDate) { showError(`err-dep-date-${i}`, true); ok = false; } else { showError(`err-dep-date-${i}`, false); }
+      if (!dep.departureTime) { showError(`err-dep-time-${i}`, true); ok = false; } else { showError(`err-dep-time-${i}`, false); }
+      if (!dep.location)      { showError(`err-dep-location-${i}`, true); ok = false; } else { showError(`err-dep-location-${i}`, false); }
+    });
   }
 
   if (!ok) {
@@ -1597,6 +1840,23 @@ function formatDate(dateStr) {
   const [y, m, d] = dateStr.split('-');
   const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   return `${months[parseInt(m,10)-1]} ${parseInt(d,10)}, ${y}`;
+}
+
+function time15Options(selected, nightOnly) {
+  let html = '<option value="">Select time</option>';
+  const hours = nightOnly
+    ? [17, 18, 19, 20, 21, 22, 23, 0, 1, 2, 3, 4]
+    : Array.from({ length: 24 }, (_, i) => i);
+  for (const h of hours) {
+    for (let m = 0; m < 60; m += 15) {
+      const val = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+      const hour12 = ((h + 11) % 12) + 1;
+      const period = h < 12 ? 'AM' : 'PM';
+      const label = `${hour12}:${String(m).padStart(2,'0')} ${period}`;
+      html += `<option value="${val}" ${val === selected ? 'selected' : ''}>${label}</option>`;
+    }
+  }
+  return html;
 }
 
 /* ─── Init ───────────────────────────────────────────────────────────────── */
