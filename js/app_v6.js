@@ -29,31 +29,31 @@ const INTERESTS = [
 ];
 
 const TOURS = [
-  { id: 'atv',             name: 'ATV Tour',             tagline: 'Off-road jungle adventure',      interests: ['adventure'],            tiers: ['100-150','150-250','250+'], priceFrom: 70,  duration: '2–4 hours',          emoji: '🏍️',  image: 'assets/atv.jpg',  gradient: 'linear-gradient(135deg,#5D4037,#A1643E)',  desc: 'Explore rugged Costa Rica terrain on an exciting ATV adventure through jungle trails and scenic overlooks.', durationOptions: ['2h ($70)', '3h ($95)', '4h ($120)'] },
-  { id: 'horseback',       name: 'Horseback Riding',     tagline: 'Coastal trail rides',            interests: ['adventure','wildlife'],  tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🐴',  image: 'assets/horseback.jpg', gradient: 'linear-gradient(135deg,#BF360C,#E64A19)',  desc: 'Ride through scenic coastal trails, tropical forests, and stunning ocean overlooks with expert guides.', timeOptions: ['AM', 'PM'], durationOptions: ['2h', '3h'] },
+  { id: 'atv',             name: 'ATV Tour',             tagline: 'Off-road jungle adventure',      interests: ['adventure'],            tiers: ['100-150','150-250','250+'], priceFrom: 70,  duration: '2–4 hours',          emoji: '🏍️',  image: 'assets/atv.jpg',  gradient: 'linear-gradient(135deg,#5D4037,#A1643E)',  desc: 'Explore rugged Costa Rica terrain on an exciting ATV adventure through jungle trails and scenic overlooks.', kidsNote: true, kidsPrice: '$40 starting price', infoNote: '<strong>Extra Passengers:</strong> ATV $30 - Buggy $40', images: ['assets/atv/5a82349b-3e7e-4a31-affe-8345e1d93d7b.webp', 'assets/atv/b1549bf7-4adc-4104-ae9d-f65653262669.webp', 'assets/atv/db1545da-39cd-4964-90f5-27c61573f7d8.webp'] },
+  { id: 'horseback',       name: 'Horseback Riding',     tagline: 'Coastal trail rides',            interests: ['adventure','wildlife'],  tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2–3 hours',          emoji: '🐴',  image: 'assets/horseback.jpg', gradient: 'linear-gradient(135deg,#BF360C,#E64A19)',  desc: 'Ride through scenic coastal trails, tropical forests, and stunning ocean overlooks with expert guides.', timeOptions: ['AM', 'PM'], durationOptions: ['2h', '3h'], images: ['assets/horseback/13568a9a-83f0-487f-896c-462b5c273046.webp', 'assets/horseback/1eff4d3a-e3a7-4765-8c00-e237ce082cd8.jpg'] },
   { id: 'monkeys',         name: 'Monkey Tour',          tagline: 'Meet the jungle locals',         interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 55,  duration: '2–3 hours',          emoji: '🐒',  image: 'assets/monkeys.jpg', gradient: 'linear-gradient(135deg,#33691E,#558B2F)',  desc: 'Get up close with howler and white-faced monkeys in their natural tropical habitat. A must for nature lovers.', transportNote: 'Transportation to the Mangrove is an extra cost depending on where you are staying — <strong>$190 for 1–6 pax</strong>.' },
-  { id: 'crocodile',       name: 'Crocodile Tour',       tagline: 'River wildlife adventure',       interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🐊',  image: 'assets/crocodile.jpg', gradient: 'linear-gradient(135deg,#827717,#B39000)',  desc: 'Cruise the Tarcoles River and spot massive American crocodiles in the wild up close.', kidsNote: 'Kids ages 5–12: <strong>$45</strong>. Kids under 4: <strong>free</strong>.', timeOptions: ['AM', 'PM'] },
-  { id: 'snorkeling',      name: 'Snorkeling',           tagline: 'Discover marine life',           interests: ['ocean'],                tiers: ['65-100','100-150','150-250','250+'], priceFrom: 90,  duration: '2–3 hours',          emoji: '🤿',  image: 'assets/snorkeling.jpg', gradient: 'linear-gradient(135deg,#00838F,#00ACC1)',  desc: 'Discover vibrant marine life in the crystal-clear Pacific waters near the coastline.', durationOptions: ['2h', '3h'] },
-  { id: 'zipline',         name: 'Zipline',              tagline: 'Fly through the canopy',         interests: ['adventure'],            tiers: ['65-100','100-150','150-250','250+'], priceFrom: 70, duration: '3 hours',            emoji: '🪂',  image: 'assets/zipline.jpg', gradient: 'linear-gradient(135deg,#2E7D32,#43A047)',  desc: 'Soar through the jungle canopy on thrilling ziplines with breathtaking panoramic views of the valley.', timeOptions: ['AM', 'PM'] },
-  { id: 'rafting',         name: 'White Water Rafting',  tagline: 'River rapids adventure',         interests: ['adventure'],            tiers: ['100-150','150-250','250+'],          priceFrom: 120, duration: 'Full day',            emoji: '🚣',  image: 'assets/rafting.jpg', gradient: 'linear-gradient(135deg,#0277BD,#01579B)',  desc: 'Experience the thrill of navigating high-energy river rapids through lush tropical canyons with expert guides.', priceUnit: '/ person (pickup included)' },
+  { id: 'crocodile',       name: 'Crocodile Tour',       tagline: 'River wildlife adventure',       interests: ['wildlife'],             tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🐊',  image: 'assets/crocodile.jpg', gradient: 'linear-gradient(135deg,#827717,#B39000)',  desc: 'Cruise the Tarcoles River and spot massive American crocodiles in the wild up close.', kidsNote: 'Kids ages 5–12: <strong>$45</strong>. Kids under 4: <strong>free</strong>.', timeOptions: ['AM', 'PM'], images: ['assets/crocodile/IMG_8755.JPG', 'assets/crocodile/IMG_8762.JPG', 'assets/crocodile/IMG_8768.JPG', 'assets/crocodile/IMG_8771.JPG', 'assets/crocodile/IMG_8772.JPG', 'assets/crocodile/IMG_8780.JPG', 'assets/crocodile/IMG_8798.JPG', 'assets/crocodile/IMG_8799.JPG', 'assets/crocodile/IMG_8867.JPG', 'assets/crocodile/IMG_8873.JPG', 'assets/crocodile/IMG_8889.JPG', 'assets/crocodile/IMG_8891.JPG', 'assets/crocodile/IMG_8895.JPG', 'assets/crocodile/IMG_8897.JPG', 'assets/crocodile/IMG_8902.JPG', 'assets/crocodile/IMG_8913.JPG', 'assets/crocodile/IMG_8920.JPG'] },
+  { id: 'snorkeling',      name: 'Snorkeling',           tagline: 'Discover marine life',           interests: ['ocean'],                tiers: ['65-100','100-150','150-250','250+'], priceFrom: 90,  duration: '2 hours',            emoji: '🤿',  image: 'assets/snorkeling.jpg', gradient: 'linear-gradient(135deg,#00838F,#00ACC1)',  desc: 'Discover vibrant marine life in the crystal-clear Pacific waters near the coastline.', transportNote: 'Transportation is included.' },
+  { id: 'zipline',         name: 'Zipline',              tagline: 'Fly through the canopy',         interests: ['adventure'],            tiers: ['65-100','100-150','150-250','250+'], priceFrom: 70, duration: '3 hours',            emoji: '🪂',  image: 'assets/zipline.jpg', gradient: 'linear-gradient(135deg,#2E7D32,#43A047)',  desc: 'Soar through the jungle canopy on thrilling ziplines with breathtaking panoramic views of the valley.', timeOptions: ['AM', 'PM'], images: ['assets/zipline/IMG_4924.JPG', 'assets/zipline/IMG_4926.JPG', 'assets/zipline/IMG_4942.JPG', 'assets/zipline/IMG_4947.JPG', 'assets/zipline/IMG_5103.JPG', 'assets/zipline/IMG_5110.JPG', 'assets/zipline/IMG_5113.JPG', 'assets/zipline/IMG_5118.JPG', 'assets/zipline/IMG_5122.JPG'] },
+  { id: 'rafting',         name: 'White Water Rafting',  tagline: 'River rapids adventure',         interests: ['adventure'],            tiers: ['100-150','150-250','250+'],          priceFrom: 120, duration: 'Full day',            emoji: '🚣',  image: 'assets/rafting.jpg', gradient: 'linear-gradient(135deg,#0277BD,#01579B)',  desc: 'Experience the thrill of navigating high-energy river rapids through lush tropical canyons with expert guides.', priceUnit: '/ person', transportNote: 'Pickup is included.', images: ['assets/rafting/20240317_143004_0291C0.JPEG', 'assets/rafting/20240317_143005_0C1D4B.JPEG'] },
   { id: 'jetski',          name: 'Jet Ski',              tagline: 'Race across the waves',          interests: ['ocean'],                tiers: ['100-150','150-250','250+'],          priceFrom: 120, duration: '1–4 hours',          emoji: '🌊',  image: 'assets/jetski.jpg',  gradient: 'linear-gradient(135deg,#006064,#00838F)',  desc: 'Race across the Pacific waves on a thrilling jet ski adventure along the stunning coastline.', durationOptions: ['1h ($120)', '2h ($200)', '3h ($280)', '4h ($350)'] },
-  { id: 'tortuga',         name: 'Tortuga Island',       tagline: 'Paradise island escape',         interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 160, duration: 'Full day',            emoji: '🏝️', image: 'assets/tortuga.jpg', gradient: 'linear-gradient(135deg,#00695C,#00897B)',  desc: 'All-inclusive full-day tour to Tortuga Island departing from Los Sueños Marina. Includes light breakfast, gourmet and DELICIOUS beachfront lunch, unlimited drinks with VIP beach service (host will go to every chair and serve you), private beach chair and umbrella plus 3 activities included (snorkeling, banana boat and hike — <em>hike is optional</em>).' },
-  { id: 'paragliding',     name: 'Paragliding',          tagline: 'Soar above the coast',           interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 165, duration: '2 hours',            emoji: '🪁',  image: 'assets/paragliding.jpg', gradient: 'linear-gradient(135deg,#1565C0,#1976D2)',  desc: 'Fly high above the coast and jungle with a professional paragliding guide. Unforgettable views await.', timeOptions: ['AM', 'PM'] },
-  { id: 'fishing',         name: 'Sport Fishing',        tagline: 'Offshore fishing',               interests: ['ocean'],                tiers: ['250+'],                             priceFrom: 850, duration: 'Full day',            emoji: '🎣',  image: 'assets/fishing.jpg', gradient: 'linear-gradient(135deg,#01579B,#0277BD)',  desc: 'World-class offshore fishing for marlin, sailfish, and dorado with expert local guides.' },
-  { id: 'surf',            name: 'Surf Lessons',         tagline: 'Catch your first wave',          interests: ['ocean','adventure'],    tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '🏄‍♂️', image: 'assets/surf.jpg', gradient: 'linear-gradient(135deg,#0097A7,#00BCD4)',  desc: 'Learn to surf with professional local instructors at some of the world’s best beginner breaks.', timeOptions: ['AM', 'PM'] },
-  { id: 'coffee',          name: 'Coffee & Guaro Tasting',     tagline: 'Authentic local flavors',        interests: ['food'],                 tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '☕',  image: 'assets/coffee.jpg', gradient: 'linear-gradient(135deg,#795548,#8D6E63)',  desc: 'We bring the flavors to you with a guided tasting of Costa Rican coffee and Guaro. Enjoy traditional coffee brewing and cupping, premium Guaro tastings, and handcrafted local snacks—all while supporting local farmers, artists, and families.' },
-  { id: 'volcano',         name: 'Volcano Tour',         tagline: 'Majestic peaks & hot springs',   interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 180, duration: 'Full day',            emoji: '🌋',  image: 'assets/volcano.jpg', gradient: 'linear-gradient(135deg,#BF360C,#3E2723)',  desc: 'This full-day tour includes a day pass to the hot springs, transportation, and lunch.', infoNote: 'For night stays, ask the Lokani team for price and information.<br><a href="https://wa.me/1234567890" target="_blank" style="color:var(--teal); font-weight:600; text-decoration:none; margin-right: 12px; display:inline-block; margin-top:6px;">📱 WhatsApp</a><a href="mailto:info@lokanitours.com" style="color:var(--teal); font-weight:600; text-decoration:none; display:inline-block; margin-top:6px;">✉️ Email</a>' },
-  { id: 'chocolate',       name: 'Chocolate Tasting',    tagline: 'The art of cocoa',               interests: ['food'],                 tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🍫',  image: 'assets/chocolate.jpg', gradient: 'linear-gradient(135deg,#3E2723,#5D4037)',  desc: 'Experience the rich flavors of Costa Rican cacao through an authentic and flavorful chocolate tasting.', timeOptions: ['AM', 'PM'] },
-  { id: 'partyboat',       name: 'Party Boat',    tagline: 'Music, drinks & ocean vibes',    interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 1550,  duration: '4 hours',            emoji: '🍹',  image: 'assets/party_boat.jpg', gradient: 'linear-gradient(135deg,#FF6F00,#E65100)',  desc: 'Dance the afternoon away on a luxury catamaran with live music, open bar, and the best sunset views on the coast.', priceUnit: 'for whole boat', timeOptions: ['8 AM to 12 PM', '12 PM to 4 PM'] },
+  { id: 'tortuga',         name: 'Tortuga Island',       tagline: 'Paradise island escape',         interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 160, duration: 'Full day',            emoji: '🏝️', image: 'assets/tortuga.jpg', gradient: 'linear-gradient(135deg,#00695C,#00897B)',  desc: 'All-inclusive full-day tour to Tortuga Island departing from Los Sueños Marina. Includes light breakfast, gourmet and DELICIOUS beachfront lunch, unlimited drinks with VIP beach service (host will go to every chair and serve you), private beach chair and umbrella plus 3 activities included (snorkeling, banana boat and hike — <em>hike is optional</em>).', images: ['assets/tortuga/20240317_142538_0D276C.JPEG', 'assets/tortuga/20240317_152105_09BC69.JPEG', 'assets/tortuga/20241020_172708_702926.JPEG', 'assets/tortuga/89BBB065-507C-4415-95A5-D6BF58F79A38.jpg', 'assets/tortuga/IMG_1115.jpg.webp', 'assets/tortuga/IMG_1150.JPG', 'assets/tortuga/IMG_1175.JPG'] },
+  { id: 'paragliding',     name: 'Paragliding',          tagline: 'Soar above the coast',           interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 165, duration: '2 hours',            emoji: '🪁',  image: 'assets/paragliding.jpg', gradient: 'linear-gradient(135deg,#1565C0,#1976D2)',  desc: 'Fly high above the coast and jungle with a professional paragliding guide. Unforgettable views await.', timeOptions: ['AM', 'PM'], images: ['assets/paragliding/Zion-Paragliding-Dominical-GoPro-01.webp'] },
+  { id: 'fishing',         name: 'Sport Fishing',        tagline: 'Offshore fishing',               interests: ['ocean'],                tiers: ['250+'],                             priceFrom: 850, duration: 'Full day',            emoji: '🎣',  image: 'assets/fishing.jpg', gradient: 'linear-gradient(135deg,#01579B,#0277BD)',  desc: 'World-class offshore fishing for marlin, sailfish, and dorado with expert local guides.', images: ['assets/fishing/20240317_152322_024295.JPEG', 'assets/fishing/9c413796-ef2a-4ed6-bc08-829296c74e18.webp'] },
+  { id: 'surf',            name: 'Surf Lessons',         tagline: 'Catch your first wave',          interests: ['ocean','adventure'],    tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '🏄‍♂️', image: 'assets/surf.jpg', gradient: 'linear-gradient(135deg,#0097A7,#00BCD4)',  desc: 'Learn to surf with professional local instructors at some of the world’s best beginner breaks.', timeOptions: ['AM', 'PM'], images: ['assets/surf/IMG_0854.JPG', 'assets/surf/IMG_0958.JPG', 'assets/surf/IMG_1169.JPG', 'assets/surf/_E0A4913.JPG'] },
+  { id: 'coffee',          name: 'Coffee & Guaro Tasting',     tagline: 'Authentic local flavors',        interests: ['food'],                 tiers: ['100-150','150-250','250+'],          priceFrom: 80,  duration: '2 hours',            emoji: '☕',  image: 'assets/coffee.jpg', gradient: 'linear-gradient(135deg,#795548,#8D6E63)',  desc: 'We bring the flavors to you with a guided tasting of Costa Rican coffee and Guaro. Enjoy traditional coffee brewing and cupping, premium Guaro tastings, and handcrafted local snacks—all while supporting local farmers, artists, and families.', images: ['assets/coffee/IMG_9197.JPG', 'assets/coffee/IMG_9199.JPG', 'assets/coffee/IMG_9200.JPG', 'assets/coffee/IMG_9214.JPG', 'assets/coffee/IMG_9222.JPG', 'assets/coffee/IMG_9232.JPG'] },
+  { id: 'volcano',         name: 'Volcano Tour',         tagline: 'Majestic peaks & hot springs',   interests: ['adventure'],            tiers: ['150-250','250+'],                   priceFrom: 180, duration: 'Full day',            emoji: '🌋',  image: 'assets/volcano.jpg', gradient: 'linear-gradient(135deg,#BF360C,#3E2723)',  desc: 'This full-day tour includes a day pass to the hot springs, transportation, and lunch.', infoNote: 'For night stays, ask the Lokani team for price and information.<br><a href="https://wa.me/1234567890" target="_blank" style="color:var(--teal); font-weight:600; text-decoration:none; margin-right: 12px; display:inline-block; margin-top:6px;">📱 WhatsApp</a><a href="mailto:info@lokanitours.com" style="color:var(--teal); font-weight:600; text-decoration:none; display:inline-block; margin-top:6px;">✉️ Email</a>', images: ['assets/volcano/volcano2.webp'] },
+  { id: 'chocolate',       name: 'Chocolate Tasting',    tagline: 'The art of cocoa',               interests: ['food'],                 tiers: ['65-100','100-150','150-250','250+'], priceFrom: 65,  duration: '2 hours',            emoji: '🍫',  image: 'assets/chocolate.jpg', gradient: 'linear-gradient(135deg,#3E2723,#5D4037)',  desc: 'Experience the rich flavors of Costa Rican cacao through an authentic and flavorful chocolate tasting.', timeOptions: ['AM', 'PM'], images: ['assets/chocolate/13497_bf2af31238366309ecc30489b9eb4904182776c6.webp', 'assets/chocolate/169146044_269058418184710_324304528205770935_n.jpg', 'assets/chocolate/186583610_294167979007087_4730265145413928739_n.jpg', 'assets/chocolate/491816093_1266083475517370_7219010530974156853_n.jpg', 'assets/chocolate/643440621_122159555468944329_1523432660918837212_n.jpg'] },
+  { id: 'partyboat',       name: 'Party Boat',    tagline: 'Music, drinks & ocean vibes',    interests: ['ocean','relaxation'],   tiers: ['150-250','250+'],                   priceFrom: 1550,  duration: '4 hours',            emoji: '🍹',  image: 'assets/party_boat.jpg', gradient: 'linear-gradient(135deg,#FF6F00,#E65100)',  desc: 'Dance the afternoon away on a luxury catamaran with live music, open bar, and the best sunset views on the coast.', priceUnit: '', infoNote: 'For boat availability and options, ask the Lokani team.<br><a href="https://wa.me/1234567890" target="_blank" style="color:var(--teal); font-weight:600; text-decoration:none; margin-right: 12px; display:inline-block; margin-top:6px;">📱 WhatsApp</a><a href="mailto:info@lokanitours.com" style="color:var(--teal); font-weight:600; text-decoration:none; display:inline-block; margin-top:6px;">✉️ Email</a>', timeOptions: ['8 AM to 12 PM', '12 PM to 4 PM'], images: ['assets/partyboat/510a7705-c1f4-4eca-863e-57db0bd78188.jpg.webp', 'assets/partyboat/82939820-8e4b-492e-bd89-c132f5799882.webp', 'assets/partyboat/IMG_0839.jpg.webp', 'assets/partyboat/IMG_0931_2.jpg.webp', 'assets/partyboat/IMG_5810.jpg.webp', 'assets/partyboat/ddcbe8ef-4302-4bd1-90ca-029134a1b361.jpg.webp'] },
 ];
 
 
 const EXTRA_SERVICES = [
-  { id: 'massage',      name: 'Massage',        icon: 'assets/icons/LOKANI ICONS-11.png', desc: 'Professional in-villa massage service. Relax and recharge.',          priceFrom: 65,  options: ['55 min', '90 min'] },
+  { id: 'massage',      name: 'Massage',        icon: 'assets/icons/LOKANI ICONS-11.png', desc: 'Professional in-villa massage service. Relax and recharge.',          priceFrom: 65,  options: ['55 minutes ($65)', '90 minutes ($120)'] },
   { id: 'iv-therapy',   name: 'IV Therapy',     icon: 'assets/icons/LOKANI ICONS-18.png', desc: 'Recharge and recover with our hydration-focused in-villa IV therapy, packed with fluids, Complex B vitamins, and Vitamin C, this treatment helps restore hydration, boost energy, and get you feeling refreshed faster so you can get the best of your stay.',              priceFrom: 150, options: null },
   { id: 'private-chef', name: 'Private Chef',   icon: 'assets/icons/LOKANI ICONS-12.png', desc: 'In-villa private chef with fresh local ingredients. Choose a meal.',  priceFrom: 105, options: ['Breakfast · 1–8 pax ($105)', 'Breakfast · 10–14 pax ($130)', 'Lunch · 1–8 pax ($120)', 'Lunch · 10–14 pax ($140)', 'Dinner · 1–8 pax ($140)', 'Dinner · 10–14 pax ($170)'] },
-  { id: 'bartender',    name: 'Bartender',      icon: 'assets/icons/LOKANI ICONS-21.png', desc: 'Professional mixologist to prepare fresh tropical cocktails at your villa.', priceFrom: 80,  options: ['4 hours', 'Full evening'], note: 'Client provides the liquor.' },
-  { id: 'night-concierge', name: 'Night Concierge', icon: 'assets/icons/night_concierge.svg', desc: 'Enjoy Costa Rica nightlife stress-free — we handle restaurant reservations, club and bar access, VIP tables, grocery runs, taxi coordination and more, so your group enjoys an authentic local experience. From the first stop of the night to making sure everyone returns safely to the villa, we\'ve got your night covered.', priceFrom: 200, options: null, nightOnly: true },
+  { id: 'bartender',    name: 'Bartender',      icon: 'assets/icons/LOKANI ICONS-21.png', desc: 'Professional mixologist to prepare fresh tropical cocktails at your villa.', priceFrom: 80,  options: null, duration: '4 hours', note: 'Client provides the liquor.' },
+  { id: 'night-concierge', name: 'Night Concierge', icon: 'assets/icons/night_concierge.svg', desc: 'Enjoy Costa Rica nightlife stress-free — we handle restaurant reservations, club and bar access, VIP tables, grocery runs, taxi coordination and more, so your group enjoys an authentic local experience. From the first stop of the night to making sure everyone returns safely to the villa, we\'ve got your night covered.', priceFrom: 60, priceUnit: '/per night', options: null, nightOnly: true },
 ];
 
 const CELEBRATION_OPTIONS = [
@@ -188,6 +188,7 @@ function renderStep() {
     </div>`;
 
   bindStepEvents();
+  initCarousels();
 }
 
 /* ─── Step 1: Basic Info ─────────────────────────────────────────────────── */
@@ -421,9 +422,23 @@ function renderStep5() {
 
     return `
       <div class="tour-card ${isSelected ? 'tour-selected' : ''}" id="tour-${t.id}">
-        <div class="tour-image" style="background-image: url('${t.image}'); background-size: cover; background-position: center;">
-          <div class="tour-image-label">${displayInterest}</div>
-        </div>
+        ${t.images ? `
+          <div style="position: relative;">
+            <div class="tour-image-scroll" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; height: 200px; scrollbar-width: none; -ms-overflow-style: none;">
+              ${t.images.map(img => `
+                <div style="flex: 0 0 100%; scroll-snap-align: start; background-image: url('${img}'); background-size: cover; background-position: center; height: 100%;"></div>
+              `).join('')}
+            </div>
+            <div class="carousel-dots" style="display: flex; gap: 6px; justify-content: center; padding: 8px 0; background: var(--white); border-bottom: 1px solid var(--gray-200);">
+              ${t.images.map((_, i) => `<span class="dot" data-index="${i}" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.2); cursor: pointer; transition: background 0.2s;"></span>`).join('')}
+            </div>
+            <div class="tour-image-label" style="position: absolute; bottom: 34px; left: 12px; z-index: 2;">${displayInterest}</div>
+          </div>
+        ` : `
+          <div class="tour-image" style="background-image: url('${t.image}'); background-size: cover; background-position: center;">
+            <div class="tour-image-label">${displayInterest}</div>
+          </div>
+        `}
         <div class="tour-body">
           <div class="tour-name">${t.name}</div>
           <div class="tour-desc">${t.desc}</div>
@@ -432,10 +447,10 @@ function renderStep5() {
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#8A8480" stroke-width="1.2"/><path d="M6 3.5V6l2 1.5" stroke="#8A8480" stroke-width="1.2" stroke-linecap="round"/></svg>
               ${t.duration}
             </div>
-            <div class="tour-price">Price starting at <span>$${t.priceFrom} ${t.priceUnit || '/ person'}</span></div>
+            <div class="tour-price">Price starting at <span>$${t.priceFrom} ${t.priceUnit !== undefined ? t.priceUnit : '/ person'}</span></div>
           </div>
-          ${t.kidsNote ? `<div class="tour-kids-pricing-row"><div class="tour-price">Kids pricing <span>$45 (5–12) / kid</span></div></div>
-          <div class="tour-kids-free-note"><strong>Note:</strong> Kids under 4 is free.</div>` : ''}
+          ${t.kidsNote ? `<div class="tour-kids-pricing-row"><div class="tour-price">Kids pricing <span>${t.kidsPrice || '$45 (5–12) / kid'}</span></div></div>
+          ${t.id !== 'atv' ? `<div class="tour-kids-free-note"><strong>Note:</strong> Kids under 4 is free.</div>` : ''}` : ''}
           ${t.transportNote ? `<div class="tour-transport-note" style="font-size:0.82rem;color:#6B6560;background:rgba(26,92,74,0.05);border-left:3px solid var(--teal);padding:8px 10px;border-radius:4px;margin:8px 0 0;line-height:1.45;"><strong style="color:var(--teal);text-transform:uppercase;letter-spacing:0.5px;font-size:0.72rem;display:block;margin-bottom:2px;">Getting there</strong>${t.transportNote}</div>` : ''}
           ${t.infoNote ? `<div class="tour-info-note" style="font-size:0.82rem;color:#6B6560;background:rgba(26,92,74,0.05);border-left:3px solid var(--teal);padding:8px 10px;border-radius:4px;margin:8px 0 0;line-height:1.45;"><strong style="color:var(--teal);text-transform:uppercase;letter-spacing:0.5px;font-size:0.72rem;display:block;margin-bottom:2px;">Good to know</strong>${t.infoNote}</div>` : ''}
           <button class="btn-select-tour" onclick="toggleTour('${t.id}')" style="margin-top:12px;">
@@ -455,22 +470,39 @@ function renderStep5() {
                 <div class="field-error" id="err-tour-guests-inline-${t.id}" style="display:none; font-size:0.75rem; margin-top:4px; text-align:left; line-height:1.4;">Guest count cannot exceed your total party size (${state.data.adults + state.data.kids}).</div>
               </div>
             </div>
-            ${t.id === 'volcano' ? `
+            ${t.id === 'volcano' || t.id === 'partyboat' ? `
               <div class="form-group" style="margin-top:12px;">
                 <label style="display:flex; align-items:center; gap:8px; text-transform:none; letter-spacing:normal; cursor:pointer;">
                   <input type="checkbox" style="width:18px; height:18px; accent-color:var(--teal);" id="tour-nightstay-${t.id}" ${sel?.nightStay ? 'checked' : ''} onchange="updateTourData('${t.id}','nightStay',this.checked)">
-                  <span>I'm interested in a night stay — please contact me with pricing</span>
+                  <span>${t.id === 'partyboat' ? 'I\'m interested in custom options and availability for the boat — please contact me' : 'I\'m interested in a night stay — please contact me with pricing'}</span>
                 </label>
               </div>` : ''}
-            ${t.durationOptions ? `
+            ${t.id === 'atv' ? `
               <div class="form-group" style="margin-top:12px;" id="tour-duration-group-${t.id}">
-                <label>Preferred duration</label>
+                <label>Preferred option</label>
+                <div style="font-size:0.8rem; font-weight:600; color:#6B6560; margin-top:8px; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">ATV</div>
                 <div class="option-chips" style="margin-top:4px;">
-                  ${t.durationOptions.map(o =>
+                  ${['2h ($70)', '3h ($95)', '4h ($120)'].map(o =>
                     `<span class="option-chip ${sel?.durationOption === o ? 'active' : ''}" onclick="setTourDuration('${t.id}','${o}',this); this.parentElement.querySelectorAll('.option-chip').forEach(c=>c.style.borderColor='');">${o}</span>`
                   ).join('')}
                 </div>
-              </div>` : ''}
+                <div style="font-size:0.8rem; font-weight:600; color:#6B6560; margin-top:12px; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Buggy</div>
+                <div class="option-chips" style="margin-top:4px;">
+                  ${['2h ($150)', '3h ($190)', '4h ($225)'].map(o =>
+                    `<span class="option-chip ${sel?.durationOption === o ? 'active' : ''}" onclick="setTourDuration('${t.id}','${o}',this); this.parentElement.querySelectorAll('.option-chip').forEach(c=>c.style.borderColor='');">${o}</span>`
+                  ).join('')}
+                </div>
+              </div>` : `
+              ${t.durationOptions ? `
+                <div class="form-group" style="margin-top:12px;" id="tour-duration-group-${t.id}">
+                  <label>Preferred duration</label>
+                  <div class="option-chips" style="margin-top:4px;">
+                    ${t.durationOptions.map(o =>
+                      `<span class="option-chip ${sel?.durationOption === o ? 'active' : ''}" onclick="setTourDuration('${t.id}','${o}',this); this.parentElement.querySelectorAll('.option-chip').forEach(c=>c.style.borderColor='');">${o}</span>`
+                    ).join('')}
+                  </div>
+                </div>` : ''}
+            `}
             ${t.timeOptions ? `
               <div class="form-group" style="margin-top:12px;" id="tour-time-group-${t.id}">
                 <label>Preferred time</label>
@@ -527,9 +559,10 @@ function renderStep6() {
         <div class="service-name">${s.name}</div>
         <div class="service-desc">${s.desc}</div>
         ${s.note ? `<div class="service-note" style="font-size:0.82rem;color:#6B6560;background:rgba(26,92,74,0.05);border-left:3px solid var(--teal);padding:8px 10px;border-radius:4px;margin:4px 0 12px;line-height:1.45;"><strong style="color:var(--teal);text-transform:uppercase;letter-spacing:0.5px;font-size:0.72rem;display:block;margin-bottom:2px;">Please note</strong>${s.note}</div>` : ''}
-        <div class="service-price">From $${s.priceFrom}</div>
+        <div class="service-price">From $${s.priceFrom}${s.priceUnit || ''}</div>
         <div class="service-details-form" onclick="event.stopPropagation()">
           ${s.options ? `<label>Choose options</label>${optionDropdown}` : ''}
+          ${s.duration ? `<label>Duration</label><div style="font-size:0.95rem; color:var(--text-color); margin-bottom:16px;">${s.duration}</div>` : ''}
           <label>Preferred date</label>
           <input class="form-control" type="date" id="srv-date-${s.id}" value="${esc(sel?.date || '')}" min="${esc(d.arrivalDate) || todayStr()}" ${d.departureDate ? `max="${esc(d.departureDate)}"` : ''} onchange="updateServiceData('${s.id}','date',this.value); this.style.borderColor='';">
           <label>Preferred time</label>
@@ -1286,6 +1319,43 @@ function bindStepEvents() {
       if (err) err.style.display = 'none';
     });
   });
+}
+
+function initCarousels() {
+  setTimeout(() => {
+    const containers = document.querySelectorAll('.tour-image-scroll');
+    containers.forEach(container => {
+      const dots = container.parentElement.querySelectorAll('.dot');
+      if (dots.length === 0) return;
+      
+      const width = container.clientWidth;
+      if (width === 0) return;
+      
+      function updateDots() {
+        const index = Math.round(container.scrollLeft / width);
+        dots.forEach((dot, i) => {
+          dot.style.background = i === index ? 'var(--teal)' : 'rgba(0,0,0,0.2)';
+        });
+      }
+      
+      container.addEventListener('scroll', updateDots);
+      
+      const interval = setInterval(() => {
+        let next = Math.round(container.scrollLeft / width) + 1;
+        if (next >= dots.length) next = 0;
+        container.scrollTo({ left: next * width, behavior: 'smooth' });
+      }, 3000);
+      
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          clearInterval(interval);
+          container.scrollTo({ left: i * width, behavior: 'smooth' });
+        });
+      });
+      
+      updateDots();
+    });
+  }, 100);
 }
 
 /* ─── Counter Buttons ────────────────────────────────────────────────────── */

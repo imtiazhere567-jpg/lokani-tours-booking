@@ -603,7 +603,7 @@ select.form-control {
   box-shadow: 0 0 0 1px var(--teal), var(--shadow-lg);
 }
 .tour-image {
-  height: 150px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
